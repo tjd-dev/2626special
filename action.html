@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2626 N Lakeview Ave &mdash; What Unit Owners Can &amp; Should Do</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
+
+  :root {
+    --navy: #0F2B46;
+    --dark-blue: #1A3A5C;
+    --accent-red: #C0392B;
+    --accent-red-light: #E74C3C;
+    --accent-gold: #D4A017;
+    --warm-gray: #F8F6F3;
+    --medium-gray: #E8E4DF;
+    --text-dark: #1A1A1A;
+    --text-muted: #555;
+    --success: #27AE60;
+    --warning: #E67E22;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: letter;
+    margin: 0.6in 0.65in;
+  }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page-break { page-break-before: always; break-before: page; }
+    .action-block { break-inside: avoid; page-break-inside: avoid; }
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--accent-red) 0%, #962D22 100%);
+    color: white;
+    padding: 32px 40px 24px;
+    position: relative;
+  }
+  .header-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .header-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    max-width: 650px;
+  }
+  .header-badge {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.8);
+  }
+  .header-badge strong {
+    display: block;
+    font-size: 13px;
+    color: white;
+  }
+
+  /* CONTENT */
+  .content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 24px 40px;
+  }
+
+  .intro {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--medium-gray);
+    line-height: 1.7;
+  }
+
+  /* ACTION BLOCKS */
+  .action-block {
+    margin-bottom: 24px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .action-block.urgent {
+    border-color: var(--accent-red);
+    border-width: 2px;
+  }
+  .action-block.important {
+    border-color: var(--warning);
+    border-width: 2px;
+  }
+
+  .action-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: var(--warm-gray);
+    border-bottom: 1px solid var(--medium-gray);
+  }
+  .action-block.urgent .action-header {
+    background: #FDF2F2;
+    border-bottom-color: #F5C6C6;
+  }
+  .action-block.important .action-header {
+    background: #FEF9E7;
+    border-bottom-color: #F5DFA0;
+  }
+
+  .action-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    flex-shrink: 0;
+    color: white;
+    background: var(--navy);
+  }
+  .action-block.urgent .action-number { background: var(--accent-red); }
+  .action-block.important .action-number { background: var(--warning); }
+
+  .action-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .action-block.urgent .action-title { color: var(--accent-red); }
+  .action-block.important .action-title { color: #B8700A; }
+
+  .action-tag {
+    margin-left: auto;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .action-block.urgent .action-tag {
+    background: var(--accent-red);
+    color: white;
+  }
+  .action-block.important .action-tag {
+    background: var(--warning);
+    color: white;
+  }
+
+  .action-body {
+    padding: 16px 20px;
+  }
+  .action-body p {
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+  }
+  .action-body p:last-child { margin-bottom: 0; }
+
+  .action-detail {
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--warm-gray);
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  .action-detail strong { color: var(--text-dark); }
+
+  /* FOOTER */
+  .footer {
+    background: var(--warm-gray);
+    border-top: 3px solid var(--navy);
+    padding: 20px 40px;
+    margin-top: 32px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .footer strong { color: var(--text-dark); }
+
+  /* SITE NAV - screen only */
+  .site-nav {
+    background: var(--navy, #0F2B46);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', -apple-system, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-nav-brand {
+    font-size: 13px;
+    font-weight: 700;
+    color: #D4A017;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .site-nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .site-nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .site-nav-links a:hover { color: white; }
+  .site-nav-links a.active { color: white; border-bottom: 2px solid #D4A017; padding-bottom: 2px; }
+  .site-nav-cta {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: white !important;
+    background: #C0392B;
+    padding: 6px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .site-nav-cta:hover { background: #A93226 !important; }
+  @media print { .site-nav { display: none; } }
+  @media (max-width: 640px) {
+    .site-nav { flex-direction: column; gap: 8px; }
+    .site-nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  }
+
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="site-nav-brand">2626 N Lakeview</a>
+  <div class="site-nav-links">
+    <a href="bulletin.html">Bulletin</a>
+    <a href="action.html" class="active">Action Plan</a>
+    <a href="signup.html">Sign Up</a>
+  </div>
+</nav>
+
+
+<div class="header">
+  <div class="header-badge">
+    <strong>March 2026</strong>
+    2626 N Lakeview Ave
+  </div>
+  <div class="header-label">2626 N Lakeview Ave &bull; Resident Action Plan</div>
+  <h1>What Unit Owners Can &amp; Should Do</h1>
+  <p class="header-sub">Concrete steps every owner should consider in response to $43.6 million in special assessments, governance failures, and inadequate disclosures at 2626 N Lakeview Ave.</p>
+</div>
+
+<div class="content">
+
+  <p class="intro">The following actions are available to unit owners under the Illinois Condominium Property Act, 2626 N Lakeview's declaration and bylaws, and general principles of condo governance. Items marked <strong>urgent</strong> address governance failures that contributed directly to this crisis. Items marked <strong>important</strong> protect individual owners' legal and financial interests. All owners are encouraged to consult with a licensed Illinois attorney before pursuing legal remedies.</p>
+
+  <!-- 1 -->
+  <div class="action-block urgent">
+    <div class="action-header">
+      <div class="action-number">1</div>
+      <div class="action-title">Pursue Board Recall &amp; Reconstitution</div>
+      <div class="action-tag">Urgent</div>
+    </div>
+    <div class="action-body">
+      <p>Two special assessments totaling $43.6 million in five years is a governance failure. Under the Illinois Condominium Property Act and 2626 N Lakeview's declaration and bylaws, unit owners have the right to call a special meeting to recall board members and elect new leadership.</p>
+      <p>A building of 491 units needs forward-looking leadership committed to long-term capital planning &mdash; not a board that micro-manages day-to-day operations while critical infrastructure deteriorates for decades.</p>
+      <div class="action-detail">
+        <strong>How:</strong> Review the declaration and bylaws for the percentage of owners required to call a special meeting (typically 20% of unit owners). Circulate a written petition. Organize candidates with relevant professional backgrounds before the meeting.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="action-block urgent">
+    <div class="action-header">
+      <div class="action-number">2</div>
+      <div class="action-title">Demand Replacement of the Management Company</div>
+      <div class="action-tag">Urgent</div>
+    </div>
+    <div class="action-body">
+      <p>When a board micro-manages its property manager &mdash; dictating priorities, overriding professional recommendations, and limiting the manager's ability to plan independently &mdash; the management company cannot effectively execute long-term capital projects or preventive maintenance.</p>
+      <p>A new board should evaluate whether the current management company has the expertise and independence to manage a 491-unit high-rise through $19 million in capital projects, or whether a firm with demonstrated large-building experience should be retained.</p>
+      <div class="action-detail">
+        <strong>How:</strong> Request an RFP process for management companies with experience managing Chicago high-rises of 400+ units through major capital projects. Compare fees, staffing models, and references.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="action-block urgent">
+    <div class="action-header">
+      <div class="action-number">3</div>
+      <div class="action-title">Form a Resident Oversight Committee</div>
+      <div class="action-tag">Urgent</div>
+    </div>
+    <div class="action-body">
+      <p>Organize a volunteer oversight committee &mdash; independent of the board &mdash; to evaluate governance effectiveness, review financial decisions, monitor project execution, and report findings to all owners.</p>
+      <p>Include owners with relevant professional backgrounds (finance, engineering, real estate, law) with standing access to board minutes, financials, reserve studies, and contractor bids. Transparency is the first step toward accountability.</p>
+      <div class="action-detail">
+        <strong>How:</strong> Recruit 5&ndash;10 owners willing to serve. Draft a charter defining the committee's scope, reporting cadence, and information access rights. Present the charter to the board with a request for formal recognition.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="action-block urgent">
+    <div class="action-header">
+      <div class="action-number">4</div>
+      <div class="action-title">Address the Succession &amp; Continuity Risk</div>
+      <div class="action-tag">Urgent</div>
+    </div>
+    <div class="action-body">
+      <p>A building of this size cannot be governed sustainably by a small group of long-tenured volunteers without term limits or succession planning. When leadership is concentrated among a few very senior individuals, the building faces real continuity risk &mdash; sudden departures, health events, or burnout can leave a knowledge vacuum.</p>
+      <p>2626 N Lakeview needs a governance structure that ensures decisions are transparent and new leadership is continuously developed.</p>
+      <div class="action-detail">
+        <strong>How:</strong> Propose bylaw amendments establishing term limits (e.g., 4&ndash;6 year maximum consecutive service), mandatory succession planning, and staggered board elections to prevent wholesale turnover.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- 5 -->
+  <div class="action-block important">
+    <div class="action-header">
+      <div class="action-number">5</div>
+      <div class="action-title">Request Complete 22.1 Disclosure History</div>
+      <div class="action-tag">Important</div>
+    </div>
+    <div class="action-body">
+      <p>Ask management for copies of all 22.1 resale disclosure certificates issued over the past 5 years. Compare what was disclosed to prospective buyers against what the board actually knew about anticipated capital expenditures at the time each disclosure was issued.</p>
+      <p>If you sold your unit recently and the disclosures were incomplete or understated anticipated costs, you may have legal exposure to your buyer. Consult an attorney experienced in Illinois condo law.</p>
+      <div class="action-detail">
+        <strong>Why this matters:</strong> As documented in this bulletin, 22.1 disclosures prepared by Sudler in spring 2025 omitted the $8M switchboard project entirely and understated facade costs by more than $7 million &mdash; despite the board having retained three forensic engineering firms and experienced an electrical fire months earlier.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="action-block important">
+    <div class="action-header">
+      <div class="action-number">6</div>
+      <div class="action-title">Demand Full Document Transparency</div>
+      <div class="action-tag">Important</div>
+    </div>
+    <div class="action-body">
+      <p>Under the Illinois Condominium Property Act (765 ILCS 605/19), unit owners have the right to inspect and copy the association's books and records. This includes board meeting minutes, financial statements, contracts, reserve studies, engineering reports, insurance policies, and correspondence between the board, management, and vendors.</p>
+      <p>Owners should demand that <strong>all association records be made available on an ongoing basis</strong> &mdash; not just upon individual written request. A well-governed building makes documents accessible by default, not by exception. Every signed contract, every engineering report, every board email concerning building operations should be available to the owners who are paying for them.</p>
+      <div class="action-detail">
+        <strong>How:</strong> Submit a formal written request under Section 19 for specific documents: the 117-page reserve study, all BAMR and engineering contracts, the Popular Bank loan agreement including prepayment terms, the 2019 Capital Improvement Report, and all board meeting minutes from 2022&ndash;2026. Demand the board establish a permanent online document portal where all non-privileged association records are posted and updated regularly.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="action-block important">
+    <div class="action-header">
+      <div class="action-number">7</div>
+      <div class="action-title">Explore Injunctive Relief &amp; Legal Remedies</div>
+      <div class="action-tag">Important</div>
+    </div>
+    <div class="action-body">
+      <p>Unit owners who believe the board's actions &mdash; or inaction &mdash; have caused financial harm may have grounds to seek injunctive relief through the courts. Injunctive relief is a court order that can compel the board to take specific actions or prohibit it from continuing harmful practices.</p>
+      <p>Potential grounds at 2626 N Lakeview may include: the board's failure to maintain adequate reserves despite known capital needs; the issuance of materially incomplete 22.1 disclosures; entering into loan terms (such as prepayment penalties) that lock the association into unfavorable financing; and the failure to competitively bid $19 million in capital projects.</p>
+      <p>Illinois courts have recognized that condo boards owe fiduciary duties to unit owners. When a board's decisions fall below the standard of care &mdash; particularly decisions involving tens of millions of dollars in owner funds &mdash; judicial intervention may be warranted.</p>
+      <div class="action-detail">
+        <strong>How:</strong> Consult an Illinois attorney experienced in condominium litigation. Injunctive relief typically requires demonstrating irreparable harm and that monetary damages alone are insufficient. Owners may also consider filing a derivative action on behalf of the association if the board refuses to act in the association's best interest. Document everything &mdash; the stronger the factual record, the stronger the legal position.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <strong>2626 N Lakeview Ave, Chicago, IL</strong> &mdash; <strong>Disclaimer:</strong> This document is prepared by a unit owner for informational purposes only. It is not legal advice. Owners considering legal action &mdash; including board recall, injunctive relief, or claims related to 22.1 disclosures &mdash; should consult a licensed Illinois attorney experienced in condominium law. Nothing in this document should be construed as a guarantee of any legal outcome.
+</div>
+
+</body>
+</html>

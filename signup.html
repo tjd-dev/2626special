@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2626 N Lakeview Ave &mdash; Resident Sign-Up</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
+
+  :root {
+    --navy: #0F2B46;
+    --dark-blue: #1A3A5C;
+    --accent-red: #C0392B;
+    --accent-gold: #D4A017;
+    --warm-gray: #F8F6F3;
+    --medium-gray: #E8E4DF;
+    --text-dark: #1A1A1A;
+    --text-muted: #555;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: #F0EFED;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .form-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+    max-width: 560px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .form-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
+    color: white;
+    padding: 32px 36px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .form-header::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -8%;
+    width: 250px;
+    height: 250px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+  }
+  .form-header-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+  }
+  .form-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .form-header p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  .form-body {
+    padding: 32px 36px 36px;
+  }
+
+  .form-intro {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+    line-height: 1.6;
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+  }
+  .form-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--medium-gray);
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-dark);
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(15,43,70,0.1);
+  }
+  input::placeholder, textarea::placeholder {
+    color: #BBB;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23555' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    background: var(--warm-gray);
+    border-radius: 6px;
+  }
+  .checkbox-row input[type="checkbox"] {
+    width: auto;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: var(--navy);
+  }
+  .checkbox-row label {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text-dark);
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  .checkbox-group-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent-red);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 8px;
+  }
+  .submit-btn:hover {
+    background: #A93226;
+  }
+  .submit-btn:active {
+    transform: scale(0.99);
+  }
+
+  .form-footer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  .form-footer a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .privacy-note {
+    background: var(--warm-gray);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+  .privacy-note strong { color: var(--text-dark); }
+
+  /* Print: hide form, show message */
+  @media print {
+    body { background: white; padding: 0; }
+    .form-container { box-shadow: none; border: 1px solid #ddd; }
+  }
+
+  /* SITE NAV - screen only */
+  .site-nav {
+    background: var(--navy, #0F2B46);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', -apple-system, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-nav-brand {
+    font-size: 13px;
+    font-weight: 700;
+    color: #D4A017;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .site-nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .site-nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .site-nav-links a:hover { color: white; }
+  .site-nav-links a.active { color: white; border-bottom: 2px solid #D4A017; padding-bottom: 2px; }
+  .site-nav-cta {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: white !important;
+    background: #C0392B;
+    padding: 6px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .site-nav-cta:hover { background: #A93226 !important; }
+  @media print { .site-nav { display: none; } }
+  @media (max-width: 640px) {
+    .site-nav { flex-direction: column; gap: 8px; }
+    .site-nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  }
+
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="site-nav-brand">2626 N Lakeview</a>
+  <div class="site-nav-links">
+    <a href="bulletin.html">Bulletin</a>
+    <a href="action.html">Action Plan</a>
+    <a href="signup.html" class="active">Sign Up</a>
+  </div>
+</nav>
+
+
+<div class="form-container">
+  <div class="form-header">
+    <div class="form-header-label">2626 N Lakeview Ave &bull; Resident Action Coalition</div>
+    <h1>Join the Effort</h1>
+    <p>Sign up to stay informed, connect with fellow owners, and participate in organized action regarding the $15M special assessment and building governance.</p>
+  </div>
+
+  <div class="form-body">
+    <p class="form-intro">Fill out the form below to register your interest. Your information will be kept confidential and used solely for organizing purposes among 2626 N Lakeview residents.</p>
+
+    <form id="signup-form" onsubmit="return handleSubmit()">
+
+      <div class="form-row-double">
+        <div>
+          <label for="first_name">First Name *</label>
+          <input type="text" id="first_name" placeholder="First name" required>
+        </div>
+        <div>
+          <label for="last_name">Last Name *</label>
+          <input type="text" id="last_name" placeholder="Last name" required>
+        </div>
+      </div>
+
+      <div class="form-row-double">
+        <div>
+          <label for="unit">Unit Number *</label>
+          <input type="text" id="unit" placeholder="e.g. 2408" required>
+        </div>
+        <div>
+          <label for="floor">Floor</label>
+          <input type="text" id="floor" placeholder="e.g. 24">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="(312) 555-0000">
+      </div>
+
+      <div class="form-row">
+        <label for="status">Ownership Status *</label>
+        <select id="status" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Owner-Occupant">Owner-Occupant</option>
+          <option value="Owner-Investor">Owner (Non-Resident / Investor)</option>
+          <option value="Recent Seller">Recent Seller (Sold within last 3 years)</option>
+          <option value="Recent Buyer">Recent Buyer (Purchased within last 3 years)</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-row" style="margin-bottom:24px">
+        <div class="checkbox-group-label">I'm Interested In</div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="recall" value="Board recall & reconstitution">
+          <label for="recall">Board recall &amp; reconstitution effort</label>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="oversight" value="Oversight committee">
+          <label for="oversight">Joining a resident oversight committee</label>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="legal" value="Legal remedies (22.1, injunctive relief)">
+          <label for="legal">Exploring legal remedies (22.1 claims, injunctive relief)</label>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="transparency" value="Document transparency">
+          <label for="transparency">Demanding full document transparency (contracts, emails, records)</label>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="updates" value="Stay informed only">
+          <label for="updates">Staying informed with updates only</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="background">Professional Background <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional &mdash; helps us match skills to needs)</span></label>
+        <select id="background">
+          <option value="" disabled selected>Select if applicable</option>
+          <option value="Legal / Attorney">Legal / Attorney</option>
+          <option value="Finance / Accounting">Finance / Accounting</option>
+          <option value="Real Estate">Real Estate</option>
+          <option value="Engineering / Architecture">Engineering / Architecture</option>
+          <option value="Construction / Project Mgmt">Construction / Project Management</option>
+          <option value="Insurance">Insurance</option>
+          <option value="Other Professional">Other Professional Background</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="comments">Anything Else We Should Know?</label>
+        <textarea id="comments" placeholder="Any concerns, information, or skills you'd like to share..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Sign-Up</button>
+
+      <div class="privacy-note">
+        <strong>Privacy:</strong> Submitting this form opens your default email app with a pre-filled message. No third-party services are used. Your information will not be shared publicly, sold, or used for any purpose other than coordinating resident action at 2626 N Lakeview Ave.
+      </div>
+
+      <div class="form-footer">
+        Already signed up? Visit the <a href="index.html">home page</a> for the latest updates.
+      </div>
+    </form>
+
+    <script>
+    function handleSubmit() {
+      var firstName = document.getElementById('first_name').value.trim();
+      var lastName = document.getElementById('last_name').value.trim();
+      var unit = document.getElementById('unit').value.trim();
+      var floor = document.getElementById('floor').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+      var status = document.getElementById('status').value;
+      var background = document.getElementById('background').value || 'Not specified';
+      var comments = document.getElementById('comments').value.trim();
+
+      var interests = [];
+      var checkboxes = ['recall','oversight','legal','transparency','updates'];
+      for (var i = 0; i < checkboxes.length; i++) {
+        var cb = document.getElementById(checkboxes[i]);
+        if (cb.checked) interests.push(cb.value);
+      }
+      var interestStr = interests.length > 0 ? interests.join(', ') : 'None selected';
+
+      var subject = '2626 Resident Sign-Up: ' + firstName + ' ' + lastName + ' - Unit ' + unit;
+
+      var body = '2626 N LAKEVIEW - RESIDENT SIGN-UP\n';
+      body += '====================================\n\n';
+      body += 'Name: ' + firstName + ' ' + lastName + '\n';
+      body += 'Unit: ' + unit + '\n';
+      body += 'Floor: ' + (floor || 'Not provided') + '\n';
+      body += 'Email: ' + email + '\n';
+      body += 'Phone: ' + (phone || 'Not provided') + '\n';
+      body += 'Ownership Status: ' + status + '\n\n';
+      body += 'INTERESTS\n';
+      body += '---------\n';
+      body += interestStr + '\n\n';
+      body += 'Professional Background: ' + background + '\n\n';
+      body += 'ADDITIONAL COMMENTS\n';
+      body += '-------------------\n';
+      body += (comments || 'None') + '\n';
+
+      var mailto = 'mailto:dolan.joseph.timothy@gmail.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
+
+      // Redirect to site after brief delay to let mail app open
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 1500);
+
+      return false;
+    }
+    </script>
+  </div>
+</div>
+
+</body>
+</html>
