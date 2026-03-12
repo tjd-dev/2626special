@@ -1,1251 +1,1801 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2626 N Lakeview Ave &mdash; Resident Information Bulletin: Special Assessment Facts</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      2626 N Lakeview Ave &mdash; Resident Information Bulletin: Special
+      Assessment Facts
+    </title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap");
 
-  :root {
-    --navy: #0F2B46;
-    --dark-blue: #1A3A5C;
-    --accent-red: #C0392B;
-    --accent-red-light: #E74C3C;
-    --accent-gold: #D4A017;
-    --warm-gray: #F8F6F3;
-    --medium-gray: #E8E4DF;
-    --text-dark: #1A1A1A;
-    --text-muted: #555;
-    --success: #27AE60;
-    --warning: #E67E22;
-  }
+      :root {
+        --navy: #0f2b46;
+        --dark-blue: #1a3a5c;
+        --accent-red: #c0392b;
+        --accent-red-light: #e74c3c;
+        --accent-gold: #d4a017;
+        --warm-gray: #f8f6f3;
+        --medium-gray: #e8e4df;
+        --text-dark: #1a1a1a;
+        --text-muted: #555;
+        --success: #27ae60;
+        --warning: #e67e22;
+      }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  @page {
-    size: letter;
-    margin: 0.5in;
-  }
+      @page {
+        size: letter;
+        margin: 0.5in;
+      }
 
-  @media print {
-    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .page-break { page-break-before: always; break-before: page; }
-    .no-print { display: none; }
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .page-break {
+          page-break-before: always;
+          break-before: page;
+        }
+        .no-print {
+          display: none;
+        }
 
-    /* Prevent elements from being split across pages */
-    .fact-box,
-    .legal-ref,
-    .stat-row,
-    .stat-card,
-    .callout,
-    .timeline-item,
-    .footer,
-    .action-item {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
+        /* Prevent elements from being split across pages */
+        .fact-box,
+        .legal-ref,
+        .stat-row,
+        .stat-card,
+        .callout,
+        .timeline-item,
+        .footer,
+        .action-item {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
 
-    /* Two-col grids: avoid splitting the row */
-    .two-col {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
+        /* Two-col grids: avoid splitting the row */
+        .two-col {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
 
-    /* Tables: keep header with body, avoid splitting rows */
-    .comparison-table {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-    .comparison-table tr {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
+        /* Tables: keep header with body, avoid splitting rows */
+        .comparison-table {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        .comparison-table tr {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
 
-    /* Keep section headers attached to content that follows */
-    .section-header {
-      break-after: avoid;
-      page-break-after: avoid;
-    }
-    h3 {
-      break-after: avoid;
-      page-break-after: avoid;
-    }
+        /* Keep section headers attached to content that follows */
+        .section-header {
+          break-after: avoid;
+          page-break-after: avoid;
+        }
+        h3 {
+          break-after: avoid;
+          page-break-after: avoid;
+        }
 
-    /* Keep each section together when possible; allow break if too long */
-    .section {
-      break-inside: auto;
-    }
+        /* Keep each section together when possible; allow break if too long */
+        .section {
+          break-inside: auto;
+        }
 
-    /* Allow large appendix tables to break across pages */
-    .appendix-table {
-      break-inside: auto;
-      page-break-inside: auto;
-    }
+        /* Allow large appendix tables to break across pages */
+        .appendix-table {
+          break-inside: auto;
+          page-break-inside: auto;
+        }
 
-    /* Add breathing room for tables that may land at top of a printed page */
-    .appendix-table thead th {
-      padding-top: 14px;
-      padding-bottom: 14px;
-    }
+        /* Add breathing room for tables that may land at top of a printed page */
+        .appendix-table thead th {
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
 
-    /* Ensure section headers after page breaks have top margin so they don't bleed */
-    .page-break + .section {
-      margin-top: 12px;
-    }
-    .page-break + .action-items {
-      margin-top: 12px;
-    }
+        /* Ensure section headers after page breaks have top margin so they don't bleed */
+        .page-break + .section {
+          margin-top: 12px;
+        }
+        .page-break + .action-items {
+          margin-top: 12px;
+        }
 
-    /* Prevent orphaned headings at bottom of page */
-    .section-header + p {
-      break-before: avoid;
-    }
-  }
+        /* Prevent orphaned headings at bottom of page */
+        .section-header + p {
+          break-before: avoid;
+        }
+      }
 
-  body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    color: var(--text-dark);
-    line-height: 1.6;
-    background: #fff;
-    font-size: 14px;
-  }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+        background: #fff;
+        font-size: 14px;
+      }
 
-  /* HEADER / MASTHEAD */
-  .masthead {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
-    color: white;
-    padding: 40px 48px 32px;
-    position: relative;
-    overflow: hidden;
-  }
-  .masthead::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255,255,255,0.03);
-    border-radius: 50%;
-  }
-  .masthead-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent-gold);
-    margin-bottom: 12px;
-  }
-  .masthead h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 8px;
-  }
-  .masthead-sub {
-    font-size: 15px;
-    color: rgba(255,255,255,0.75);
-    font-weight: 400;
-    max-width: 600px;
-  }
-  .masthead-date {
-    position: absolute;
-    top: 40px;
-    right: 48px;
-    text-align: right;
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-  }
-  .masthead-date strong {
-    display: block;
-    font-size: 14px;
-    color: rgba(255,255,255,0.8);
-  }
+      /* HEADER / MASTHEAD */
+      .masthead {
+        background: linear-gradient(
+          135deg,
+          var(--navy) 0%,
+          var(--dark-blue) 100%
+        );
+        color: white;
+        padding: 40px 48px 32px;
+        position: relative;
+        overflow: hidden;
+      }
+      .masthead::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+      }
+      .masthead-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--accent-gold);
+        margin-bottom: 12px;
+      }
+      .masthead h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1.15;
+        margin-bottom: 8px;
+      }
+      .masthead-sub {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 400;
+        max-width: 600px;
+      }
+      .masthead-date {
+        position: absolute;
+        top: 40px;
+        right: 48px;
+        text-align: right;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .masthead-date strong {
+        display: block;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+      }
 
-  /* CONTENT */
-  .content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 48px;
-  }
+      /* CONTENT */
+      .content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 48px;
+      }
 
-  /* URGENT BANNER */
-  .urgent-banner {
-    background: var(--accent-red);
-    color: white;
-    text-align: center;
-    padding: 14px 24px;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+      /* URGENT BANNER */
+      .urgent-banner {
+        background: var(--accent-red);
+        color: white;
+        text-align: center;
+        padding: 14px 24px;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
 
-  /* STAT CARDS */
-  .stat-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin: 32px 0;
-  }
-  .stat-card {
-    background: var(--warm-gray);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    border-top: 3px solid var(--navy);
-  }
-  .stat-card.danger { border-top-color: var(--accent-red); }
-  .stat-card.warning { border-top-color: var(--warning); }
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--navy);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .stat-card.danger .stat-number { color: var(--accent-red); }
-  .stat-card.warning .stat-number { color: var(--warning); }
-  .stat-label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--text-muted);
-  }
+      /* STAT CARDS */
+      .stat-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 32px 0;
+      }
+      .stat-card {
+        background: var(--warm-gray);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        border-top: 3px solid var(--navy);
+      }
+      .stat-card.danger {
+        border-top-color: var(--accent-red);
+      }
+      .stat-card.warning {
+        border-top-color: var(--warning);
+      }
+      .stat-number {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .stat-card.danger .stat-number {
+        color: var(--accent-red);
+      }
+      .stat-card.warning .stat-number {
+        color: var(--warning);
+      }
+      .stat-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+      }
 
-  /* SECTIONS */
-  .section {
-    margin: 32px 0;
-  }
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--navy);
-  }
-  .section-number {
-    background: var(--navy);
-    color: white;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 14px;
-    flex-shrink: 0;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--navy);
-  }
+      /* SECTIONS */
+      .section {
+        margin: 32px 0;
+      }
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid var(--navy);
+      }
+      .section-number {
+        background: var(--navy);
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--navy);
+      }
 
-  h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--dark-blue);
-    margin: 20px 0 8px;
-  }
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--dark-blue);
+        margin: 20px 0 8px;
+      }
 
-  p { margin-bottom: 12px; }
+      p {
+        margin-bottom: 12px;
+      }
 
-  /* FACT BOXES */
-  .fact-box {
-    background: var(--warm-gray);
-    border-left: 4px solid var(--navy);
-    padding: 16px 20px;
-    margin: 16px 0;
-    border-radius: 0 6px 6px 0;
-  }
-  .fact-box.alert {
-    background: #FDF2F2;
-    border-left-color: var(--accent-red);
-  }
-  .fact-box.warning {
-    background: #FEF9E7;
-    border-left-color: var(--warning);
-  }
-  .fact-box.success {
-    background: #F0FAF4;
-    border-left-color: var(--success);
-  }
-  .fact-box-label {
-    font-size: 10px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--accent-red);
-    margin-bottom: 4px;
-  }
-  .fact-box.warning .fact-box-label { color: var(--warning); }
-  .fact-box .fact-box-label { color: var(--navy); }
-  .fact-box.alert .fact-box-label { color: var(--accent-red); }
+      /* FACT BOXES */
+      .fact-box {
+        background: var(--warm-gray);
+        border-left: 4px solid var(--navy);
+        padding: 16px 20px;
+        margin: 16px 0;
+        border-radius: 0 6px 6px 0;
+      }
+      .fact-box.alert {
+        background: #fdf2f2;
+        border-left-color: var(--accent-red);
+      }
+      .fact-box.warning {
+        background: #fef9e7;
+        border-left-color: var(--warning);
+      }
+      .fact-box.success {
+        background: #f0faf4;
+        border-left-color: var(--success);
+      }
+      .fact-box-label {
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--accent-red);
+        margin-bottom: 4px;
+      }
+      .fact-box.warning .fact-box-label {
+        color: var(--warning);
+      }
+      .fact-box .fact-box-label {
+        color: var(--navy);
+      }
+      .fact-box.alert .fact-box-label {
+        color: var(--accent-red);
+      }
 
-  /* TIMELINE */
-  .timeline {
-    position: relative;
-    padding-left: 28px;
-    margin: 16px 0;
-  }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 4px;
-    bottom: 4px;
-    width: 2px;
-    background: var(--medium-gray);
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 16px;
-    padding-left: 12px;
-  }
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -24px;
-    top: 6px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--accent-red);
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px var(--accent-red);
-  }
-  .timeline-item.neutral::before { background: var(--navy); box-shadow: 0 0 0 2px var(--navy); }
-  .timeline-date {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent-red);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .timeline-item.neutral .timeline-date { color: var(--navy); }
+      /* TIMELINE */
+      .timeline {
+        position: relative;
+        padding-left: 28px;
+        margin: 16px 0;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 11px;
+        top: 4px;
+        bottom: 4px;
+        width: 2px;
+        background: var(--medium-gray);
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 16px;
+        padding-left: 12px;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -24px;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent-red);
+        border: 2px solid white;
+        box-shadow: 0 0 0 2px var(--accent-red);
+      }
+      .timeline-item.neutral::before {
+        background: var(--navy);
+        box-shadow: 0 0 0 2px var(--navy);
+      }
+      .timeline-date {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--accent-red);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .timeline-item.neutral .timeline-date {
+        color: var(--navy);
+      }
 
-  /* COMPARISON TABLE */
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    font-size: 13px;
-  }
-  .comparison-table th {
-    background: var(--navy);
-    color: white;
-    padding: 10px 14px;
-    text-align: left;
-    font-weight: 700;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .comparison-table td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--medium-gray);
-  }
-  .comparison-table tr:nth-child(even) td { background: var(--warm-gray); }
-  .comparison-table .highlight { color: var(--accent-red); font-weight: 700; }
-  .comparison-table .good { color: var(--success); font-weight: 600; }
+      /* COMPARISON TABLE */
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        font-size: 13px;
+      }
+      .comparison-table th {
+        background: var(--navy);
+        color: white;
+        padding: 10px 14px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .comparison-table td {
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--medium-gray);
+      }
+      .comparison-table tr:nth-child(even) td {
+        background: var(--warm-gray);
+      }
+      .comparison-table .highlight {
+        color: var(--accent-red);
+        font-weight: 700;
+      }
+      .comparison-table .good {
+        color: var(--success);
+        font-weight: 600;
+      }
 
-  /* LEGAL REFERENCE */
-  .legal-ref {
-    background: #F5F5F5;
-    border: 1px solid #DDD;
-    border-radius: 6px;
-    padding: 14px 18px;
-    margin: 12px 0;
-    font-size: 13px;
-  }
-  .legal-ref-title {
-    font-weight: 700;
-    font-size: 12px;
-    color: var(--dark-blue);
-    margin-bottom: 4px;
-  }
-  .legal-ref cite {
-    font-style: italic;
-    color: var(--text-muted);
-  }
+      /* LEGAL REFERENCE */
+      .legal-ref {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 14px 18px;
+        margin: 12px 0;
+        font-size: 13px;
+      }
+      .legal-ref-title {
+        font-weight: 700;
+        font-size: 12px;
+        color: var(--dark-blue);
+        margin-bottom: 4px;
+      }
+      .legal-ref cite {
+        font-style: italic;
+        color: var(--text-muted);
+      }
 
-  /* CALLOUT */
-  .callout {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
-    color: white;
-    border-radius: 8px;
-    padding: 24px 28px;
-    margin: 24px 0;
-  }
-  .callout h3 {
-    color: var(--accent-gold);
-    margin-top: 0;
-    font-size: 18px;
-  }
-  .callout p { color: rgba(255,255,255,0.9); }
+      /* CALLOUT */
+      .callout {
+        background: linear-gradient(
+          135deg,
+          var(--navy) 0%,
+          var(--dark-blue) 100%
+        );
+        color: white;
+        border-radius: 8px;
+        padding: 24px 28px;
+        margin: 24px 0;
+      }
+      .callout h3 {
+        color: var(--accent-gold);
+        margin-top: 0;
+        font-size: 18px;
+      }
+      .callout p {
+        color: rgba(255, 255, 255, 0.9);
+      }
 
-  /* ACTION ITEMS (print-friendly version) */
-  .action-items {
-    margin: 24px 0;
-  }
-  .action-items-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 3px solid var(--accent-red);
-  }
-  .action-items-header h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--accent-red);
-    margin: 0;
-  }
-  .action-item {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 14px;
-    padding: 14px 16px;
-    background: var(--warm-gray);
-    border-radius: 6px;
-    border-left: 4px solid var(--navy);
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-  .action-item.priority {
-    border-left-color: var(--accent-red);
-    background: #FDF2F2;
-  }
-  .action-item-number {
-    background: var(--navy);
-    color: white;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 13px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .action-item.priority .action-item-number {
-    background: var(--accent-red);
-  }
-  .action-item-content {
-    flex: 1;
-  }
-  .action-item-title {
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--navy);
-    margin-bottom: 4px;
-  }
-  .action-item.priority .action-item-title {
-    color: var(--accent-red);
-  }
-  .action-item-content p {
-    font-size: 13px;
-    margin: 0;
-    line-height: 1.5;
-  }
+      /* ACTION ITEMS (print-friendly version) */
+      .action-items {
+        margin: 24px 0;
+      }
+      .action-items-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--accent-red);
+      }
+      .action-items-header h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--accent-red);
+        margin: 0;
+      }
+      .action-item {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 14px;
+        padding: 14px 16px;
+        background: var(--warm-gray);
+        border-radius: 6px;
+        border-left: 4px solid var(--navy);
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .action-item.priority {
+        border-left-color: var(--accent-red);
+        background: #fdf2f2;
+      }
+      .action-item-number {
+        background: var(--navy);
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 13px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .action-item.priority .action-item-number {
+        background: var(--accent-red);
+      }
+      .action-item-content {
+        flex: 1;
+      }
+      .action-item-title {
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--navy);
+        margin-bottom: 4px;
+      }
+      .action-item.priority .action-item-title {
+        color: var(--accent-red);
+      }
+      .action-item-content p {
+        font-size: 13px;
+        margin: 0;
+        line-height: 1.5;
+      }
 
-  /* FOOTER */
-  .footer {
-    background: var(--warm-gray);
-    border-top: 3px solid var(--navy);
-    padding: 24px 48px;
-    margin-top: 40px;
-    font-size: 12px;
-    color: var(--text-muted);
-  }
-  .footer strong { color: var(--text-dark); }
+      /* FOOTER */
+      .footer {
+        background: var(--warm-gray);
+        border-top: 3px solid var(--navy);
+        padding: 24px 48px;
+        margin-top: 40px;
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+      .footer strong {
+        color: var(--text-dark);
+      }
 
-  /* TWO COLUMNS */
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin: 16px 0;
-  }
+      /* TWO COLUMNS */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin: 16px 0;
+      }
 
-  .source-list {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 2px solid var(--medium-gray);
-  }
-  .source-list a { color: var(--dark-blue); }
+      .source-list {
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-top: 32px;
+        padding-top: 16px;
+        border-top: 2px solid var(--medium-gray);
+      }
+      .source-list a {
+        color: var(--dark-blue);
+      }
 
-  /* SITE NAV - screen only */
-  .site-nav {
-    background: var(--navy, #0F2B46);
-    padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Inter', -apple-system, sans-serif;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    height: 48px;
-    flex-shrink: 0;
-  }
-  .site-nav-brand {
-    font-size: 13px;
-    font-weight: 700;
-    color: #D4A017;
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  .site-nav-links {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-  }
-  .site-nav-links a {
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-    transition: color 0.2s;
-    white-space: nowrap;
-  }
-  .site-nav-links a:hover { color: white; }
-  .site-nav-links a.active { color: white; border-bottom: 2px solid #D4A017; padding-bottom: 2px; }
-  @media print { .site-nav { display: none; } }
-  @media (max-width: 640px) {
-    .site-nav { padding: 0 16px; gap: 12px; }
-    .site-nav-brand { font-size: 11px; letter-spacing: 0.5px; }
-    .site-nav-links { gap: 16px; }
-    .site-nav-links a { font-size: 12px; }
-    .masthead { padding: 28px 20px 24px; }
-    .masthead h1 { font-size: 24px; }
-    .masthead-sub { font-size: 13px; }
-    .masthead-date { position: static; text-align: left; margin-top: 12px; }
-    .content { padding: 0 16px; }
-  }
-
-</style>
-</head>
-<body>
-<nav class="site-nav">
-  <a href="index.html" class="site-nav-brand">2626 N Lakeview</a>
-  <div class="site-nav-links">
-    <a href="bulletin.html" class="active">Bulletin</a>
-    <a href="action.html">Action Plan</a>
-    <a href="signup.html">Sign Up</a>
-  </div>
-</nav>
-
-
-<!-- MASTHEAD -->
-<div class="masthead">
-  <div class="masthead-date">
-    <strong>March 2026</strong>
-    Prepared by Tim Dolan<br>2626 N Lakeview Ave, Chicago
-  </div>
-  <div class="masthead-label">2626 N Lakeview Ave &bull; Resident Information Bulletin</div>
-  <h1>What Every Owner Needs to Know<br>About the $15M Special Assessment</h1>
-  <p class="masthead-sub">A fact-based analysis for residents of 2626 N Lakeview Ave &mdash; how we got here, what it means for your unit, and why proper planning could have prevented this financial burden.</p>
-</div>
-
-<div class="urgent-banner">
-  2626 N Lakeview Ave &mdash; Second major special assessment in 5 years &mdash; totaling ~$43.6 million combined
-</div>
-
-<!-- STATS -->
-<div class="content">
-  <div class="stat-row">
-    <div class="stat-card danger">
-      <div class="stat-number">$43.6M</div>
-      <div class="stat-label">Combined Special Assessments<br>(2021 + 2026)</div>
-    </div>
-    <div class="stat-card warning">
-      <div class="stat-number">~$88,800</div>
-      <div class="stat-label">Average Per-Unit Burden<br>(Both Assessments)</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">55+ yrs</div>
-      <div class="stat-label">Age of Failed Equipment<br>That Should Have Been Replaced</div>
-    </div>
-  </div>
-
-  <!-- SECTION 1: THE FACTS -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">1</div>
-      <div class="section-title">The Work: What's Actually Being Done</div>
-    </div>
-    <p>The board approved two capital projects totaling approximately $19 million. Both are necessary. But the financial crisis they create for owners is a direct result of decades of inadequate maintenance planning.</p>
-
-    <div class="two-col">
-      <div>
-        <h3>Facade Repair &mdash; ~$11 Million</h3>
-        <p>Comprehensive exterior envelope repair including replacement of all window sealant (original 1960s, never replaced), repair of 2,800 hopper windows with failed gaskets, concrete crack and spall repair, new waterproofing membrane, and complete facade re-coating. Two-year phased project.</p>
+      /* SITE NAV - screen only */
+      .site-nav {
+        background: var(--navy, #0f2b46);
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: 48px;
+        flex-shrink: 0;
+      }
+      .site-nav-brand {
+        font-size: 13px;
+        font-weight: 700;
+        color: #d4a017;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .site-nav-links {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+      .site-nav-links a {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        transition: color 0.2s;
+        white-space: nowrap;
+      }
+      .site-nav-links a:hover {
+        color: white;
+      }
+      .site-nav-links a.active {
+        color: white;
+        border-bottom: 2px solid #d4a017;
+        padding-bottom: 2px;
+      }
+      @media print {
+        .site-nav {
+          display: none;
+        }
+      }
+      @media (max-width: 640px) {
+        .site-nav {
+          padding: 0 16px;
+          gap: 12px;
+        }
+        .site-nav-brand {
+          font-size: 11px;
+          letter-spacing: 0.5px;
+        }
+        .site-nav-links {
+          gap: 16px;
+        }
+        .site-nav-links a {
+          font-size: 12px;
+        }
+        .masthead {
+          padding: 28px 20px 24px;
+        }
+        .masthead h1 {
+          font-size: 24px;
+        }
+        .masthead-sub {
+          font-size: 13px;
+        }
+        .masthead-date {
+          position: static;
+          text-align: left;
+          margin-top: 12px;
+        }
+        .content {
+          padding: 0 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="index.html" class="site-nav-brand">2626 N Lakeview</a>
+      <div class="site-nav-links">
+        <a href="bulletin.html" class="active">Bulletin</a>
+        <a href="action.html">Action Plan</a>
+        <a href="board.html">Current Board</a>
+        <a href="signup.html">Sign Up</a>
       </div>
-      <div>
-        <h3>Switchboard Replacement &mdash; ~$8 Million</h3>
-        <p>Full replacement of the building's main electrical switchboard, which is original 1960s equipment. Triggered by a fire in November 2024 that caused total power loss. Includes new electrical room construction (taking 45% of valet space), ComEd coordination, and vault modifications.</p>
+    </nav>
+
+    <!-- MASTHEAD -->
+    <div class="masthead">
+      <div class="masthead-date">
+        <strong>March 2026</strong>
+        Prepared by Tim Dolan<br />2626 N Lakeview Ave, Chicago
+      </div>
+      <div class="masthead-label">
+        2626 N Lakeview Ave &bull; Resident Information Bulletin
+      </div>
+      <h1>
+        What Every Owner Needs to Know<br />About the $15M Special Assessment
+      </h1>
+      <p class="masthead-sub">
+        A fact-based analysis for residents of 2626 N Lakeview Ave &mdash; how
+        we got here, what it means for your unit, and why proper planning could
+        have prevented this financial burden.
+      </p>
+    </div>
+
+    <div class="urgent-banner">
+      2626 N Lakeview Ave &mdash; Second major special assessment in 5 years
+      &mdash; totaling ~$43.6 million combined
+    </div>
+
+    <!-- STATS -->
+    <div class="content">
+      <div class="stat-row">
+        <div class="stat-card danger">
+          <div class="stat-number">$43.6M</div>
+          <div class="stat-label">
+            Combined Special Assessments<br />(2021 + 2026)
+          </div>
+        </div>
+        <div class="stat-card warning">
+          <div class="stat-number">~$88,800</div>
+          <div class="stat-label">
+            Average Per-Unit Burden<br />(Both Assessments)
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">55+ yrs</div>
+          <div class="stat-label">
+            Age of Failed Equipment<br />That Should Have Been Replaced
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: THE FACTS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">1</div>
+          <div class="section-title">The Work: What's Actually Being Done</div>
+        </div>
+        <p>
+          The board approved two capital projects totaling approximately $19
+          million. Both are necessary. But the financial crisis they create for
+          owners is a direct result of decades of inadequate maintenance
+          planning.
+        </p>
+
+        <div class="two-col">
+          <div>
+            <h3>Facade Repair &mdash; ~$11 Million</h3>
+            <p>
+              Comprehensive exterior envelope repair including replacement of
+              all window sealant (original 1960s, never replaced), repair of
+              2,800 hopper windows with failed gaskets, concrete crack and spall
+              repair, new waterproofing membrane, and complete facade
+              re-coating. Two-year phased project.
+            </p>
+          </div>
+          <div>
+            <h3>Switchboard Replacement &mdash; ~$8 Million</h3>
+            <p>
+              Full replacement of the building's main electrical switchboard,
+              which is original 1960s equipment. Triggered by a fire in November
+              2024 that caused total power loss. Includes new electrical room
+              construction (taking 45% of valet space), ComEd coordination, and
+              vault modifications.
+            </p>
+          </div>
+        </div>
+
+        <div class="fact-box alert" style="margin-top: 20px">
+          <div class="fact-box-label">Project Now Underway</div>
+          <p style="margin: 0">
+            As of <strong>March 17, 2026</strong>, facade repair work has
+            commenced. The contractor,
+            <strong>Bulley &amp; Andrews Masonry Restoration (BAMR)</strong>,
+            has begun mobilization and rigging. Phase 1 (tiers 04&ndash;12) runs
+            through October 2026; Phase 2 resumes March&ndash;October 2027. The
+            pool deck and sundeck are closed until penthouse repairs finish
+            (est. May 2026).
+            <em
+              >See the Project Impact page at the end of this bulletin for full
+              details on what to expect.</em
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 2: HOW WE GOT HERE -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">2</div>
+          <div class="section-title">
+            How Deferred Maintenance Created This Crisis
+          </div>
+        </div>
+
+        <p>
+          Every major component in a high-rise has a known useful life.
+          Responsible management plans and funds for replacements on predictable
+          cycles. Here's what happened instead:
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item neutral">
+            <div class="timeline-date">Late 1960s</div>
+            <p>
+              Building constructed with original window sealant, switchboard,
+              and hopper windows.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">1985&ndash;1995 (estimated)</div>
+            <p>
+              <strong>Window sealant should have been replaced</strong> the
+              first time. Industry standard useful life: 15&ndash;25 years. No
+              comprehensive replacement was ever done.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">1995&ndash;2005 (estimated)</div>
+            <p>
+              <strong
+                >Electrical switchgear should have been evaluated for
+                replacement.</strong
+              >
+              Useful life of commercial switchgear: 25&ndash;35 years. No
+              replacement was planned.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2011&ndash;2012</div>
+            <p>
+              Water infiltration reports begin. Building starts annual "leak
+              chasing" at <strong>$600K&ndash;$1M per year</strong> &mdash;
+              acknowledged as ineffective by the board's own consultants.
+            </p>
+          </div>
+          <div class="timeline-item neutral">
+            <div class="timeline-date">2011</div>
+            <p>
+              Concrete coatings applied. These are now described as "way past
+              their useful life" &mdash; just ~12 years later.
+            </p>
+          </div>
+          <div class="timeline-item neutral">
+            <div class="timeline-date">2019</div>
+            <p>
+              300+ page Capital Improvement Report prepared identifying major
+              needs.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2021</div>
+            <p>
+              <strong>First special assessment: ~$28.6 million</strong> for
+              domestic water risers and other work. Loan from Popular Bank still
+              being repaid.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">November 2024</div>
+            <p>
+              <strong>Electrical fire in the chiller room.</strong> Complete
+              building power failure. Near-evacuation. Investigation reveals
+              switchboard is damaged beyond repair.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2025&ndash;2026</div>
+            <p>
+              <strong>Second special assessment: $15 million</strong> proposed
+              for facade and switchboard. Three forensic engineering firms
+              confirm comprehensive facade repair is required.
+            </p>
+          </div>
+        </div>
+
+        <div class="fact-box alert">
+          <div class="fact-box-label">Key Finding</div>
+          <p style="margin: 0">
+            <strong
+              >An estimated $5&ndash;$10 million was spent on ineffective "leak
+              chasing"</strong
+            >
+            over the past decade. The board's own owner's representative
+            acknowledged this approach "is really not effective." That money,
+            applied to a comprehensive solution years earlier, could have
+            significantly reduced the current assessment.
+          </p>
+        </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 3: HOW THIS COMPARES (Page 3) -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">3</div>
+          <div class="section-title">
+            How 2626 N Lakeview Compares to Chicago Norms
+          </div>
+        </div>
+
+        <p>
+          Chicago's aging high-rise inventory faces widespread deferred
+          maintenance, but 2626 N Lakeview's financial burden significantly
+          exceeds city averages.
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>2626 N Lakeview</th>
+              <th>Well-Managed Chicago High-Rise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Special assessments in 5 years</td>
+              <td class="highlight">~$88,800/unit (combined)</td>
+              <td class="good">$0 &ndash; $5,000/unit</td>
+            </tr>
+            <tr>
+              <td>Reserve fund adequacy</td>
+              <td class="highlight">$6.5M for $19M in needs (34%)</td>
+              <td class="good">70&ndash;100% funded</td>
+            </tr>
+            <tr>
+              <td>Annual reserve contribution</td>
+              <td>~$4,070/unit/year</td>
+              <td class="good">$4,000&ndash;$8,000+/unit/year</td>
+            </tr>
+            <tr>
+              <td>Window sealant replacement cycle</td>
+              <td class="highlight">Never replaced (55+ years)</td>
+              <td class="good">Every 15&ndash;25 years</td>
+            </tr>
+            <tr>
+              <td>Switchgear replacement planning</td>
+              <td class="highlight">Triggered by fire (55+ years old)</td>
+              <td class="good">Planned replacement at 25&ndash;35 years</td>
+            </tr>
+            <tr>
+              <td>Facade maintenance approach</td>
+              <td class="highlight">
+                Reactive leak chasing ($600K&ndash;$1M/yr wasted)
+              </td>
+              <td class="good">Scheduled comprehensive cycles</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="fact-box">
+          <div class="fact-box-label">Chicago Context</div>
+          <p style="margin: 0">
+            Chicago's facade ordinance requires buildings over 80 feet to
+            undergo periodic inspections and mandatory repairs. Well-managed
+            buildings budget for these known cycles. Many 1960s-era Chicago
+            high-rises have completed facade rehabilitation projects for
+            $5M&ndash;$15M &mdash; but they spread the cost over time through
+            adequate reserves rather than shock assessments.
+          </p>
+        </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 4: LEGAL & FINANCIAL RISKS (Page 4) -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">4</div>
+          <div class="section-title">
+            Legal Risks: 22.1 Disclosures & Your Liability
+          </div>
+        </div>
+
+        <p>
+          Section 22.1 of the Illinois Condominium Property Act requires
+          associations to disclose to prospective buyers any capital
+          expenditures <strong>anticipated</strong> within the current or
+          succeeding two fiscal years. This is not optional. Failure to disclose
+          carries real legal consequences.
+        </p>
+
+        <div class="legal-ref">
+          <div class="legal-ref-title">
+            Mikulecky v. Bart, 355 Ill. App. 3d 1006 (2004)
+          </div>
+          <p>
+            In this landmark Illinois appellate case, a condo buyer sued after
+            the 22.1 disclosure listed only formally approved capital
+            expenditures but omitted projects that had been discussed and
+            planned by the board. The buyer discovered over $10,000 in special
+            assessments shortly after closing. The court ruled that the statute
+            requires disclosure of <strong>"anticipated"</strong> expenditures
+            &mdash; not merely those already approved. The court held that
+            giving the word its "plain and ordinary meaning" required disclosure
+            of projects the board knew about, even if not yet formally voted on.
+          </p>
+        </div>
+
+        <h3>What This Means For You as a Seller</h3>
+        <p>
+          If you sold your unit while the board was actively investigating,
+          discussing, or planning these projects &mdash; and the 22.1 did not
+          disclose them as anticipated capital expenditures &mdash;
+          <strong>you may face legal liability to your buyer.</strong> The board
+          acknowledged in the March 2026 meeting that these issues have been
+          under discussion for years, with a 2019 Capital Improvement Report
+          identifying the needs and forensic engineering investigations ongoing
+          since at least 2024.
+        </p>
+
+        <div class="fact-box alert">
+          <div class="fact-box-label">Critical Question for the Board</div>
+          <p style="margin: 0">
+            Were the 22.1 disclosure statements issued over the past several
+            years updated to reflect these anticipated capital expenditures? The
+            board's own attorney stated in the meeting that "these repairs were
+            mentioned in the 22.1 for an extended period of time, but the costs
+            were undetermined." If the disclosures were vague or incomplete,
+            owners who recently sold could face claims from their buyers &mdash;
+            and the association itself could face challenges collecting the
+            assessment from new owners.
+          </p>
+        </div>
+
+        <div class="legal-ref">
+          <div class="legal-ref-title">
+            BRK Chicago Law Firm Advisory on 22.1 Disclosures
+          </div>
+          <p>
+            "Failure to properly disclose an anticipated expenditure may affect
+            the association's ability to collect a special assessment for the
+            expenditure once approved by the Board of Directors." Associations
+            are advised to err on the side of over-disclosure, including
+            estimated cost ranges even when final costs are not yet determined.
+          </p>
+        </div>
+
+        <h3>What Recent 22.1 Disclosures Actually Reveal</h3>
+        <p>
+          Owners should be aware that 22.1 resale certificates issued by the
+          association's management company in recent years appear to have
+          <strong>substantially understated</strong> anticipated capital
+          expenditures &mdash; even after the board had clear knowledge of the
+          scope and scale of the work now being assessed.
+        </p>
+
+        <p>
+          A review of 22.1 disclosures prepared by Sudler Property Management in
+          the spring of 2025 reveals the following pattern:
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Disclosed in 22.1 (Spring 2025)</th>
+              <th>Actual Cost Announced (March 2026)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Facade / Exterior Envelope</strong></td>
+              <td>
+                ~$1M&ndash;$1.5M/year listed as "Exterior Sealant/Concrete
+                Repair"
+              </td>
+              <td class="highlight">$11 Million comprehensive facade repair</td>
+            </tr>
+            <tr>
+              <td><strong>Switchboard Replacement</strong></td>
+              <td class="highlight">Not mentioned at all</td>
+              <td class="highlight">$8 Million full replacement</td>
+            </tr>
+            <tr>
+              <td><strong>Special Assessment</strong></td>
+              <td class="highlight">Not mentioned</td>
+              <td class="highlight">$15 Million special assessment</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="fact-box alert">
+          <div class="fact-box-label">The Switchboard Omission</div>
+          <p style="margin: 0">
+            The building suffered a catastrophic electrical fire in
+            <strong>November 2024</strong> that caused total power loss and
+            near-evacuation. Yet 22.1 disclosures prepared
+            <strong>five months later</strong>, in spring 2025, contain
+            <strong>no mention whatsoever</strong> of the switchboard
+            replacement project, its estimated $8 million cost, or the fire that
+            triggered it. The board and management knew the original 1960s
+            switchboard was damaged beyond repair. This was not speculative
+            &mdash; it was an established emergency. A buyer relying on this
+            disclosure would have had no indication that this project existed.
+          </p>
+        </div>
+
+        <div class="fact-box alert">
+          <div class="fact-box-label">The Facade Understatement</div>
+          <p style="margin: 0">
+            The 22.1 lists modest annual facade line items totaling roughly $3.6
+            million across three fiscal years &mdash; labeled as routine
+            "Exterior Sealant/Concrete Repair." In reality, the board had
+            already retained
+            <strong>three forensic engineering firms</strong> to evaluate a
+            comprehensive facade failure, had a 300+ page Capital Improvement
+            Report from 2019 documenting the need, and had spent years and
+            millions in ineffective leak remediation. The actual project
+            announced less than a year later: <strong>$11 million</strong>. The
+            disclosed figures understate the true anticipated cost by more than
+            $7 million.
+          </p>
+        </div>
+
+        <div class="fact-box warning">
+          <div class="fact-box-label">
+            The Catch-All Disclaimer Is Not a Defense
+          </div>
+          <p style="margin: 0">
+            The 22.1 includes a generic statement that "other capital
+            expenditures... may be required in the coming years" and that
+            "whether any additional capital expenditures will be made... is
+            unknown at this time." Under <em>Mikulecky v. Bart</em>, this kind
+            of vague catch-all does not satisfy the statutory obligation. The
+            court made clear that "anticipated" means what the board actually
+            knew about &mdash; and a blanket disclaimer cannot substitute for
+            specific disclosure of projects the board was actively
+            investigating, engineering, and pricing.
+            <strong
+              >This disclosure gap exposes both the association and individual
+              sellers to significant legal risk.</strong
+            >
+            Buyers who purchased units in reliance on these 22.1 disclosures
+            &mdash; unaware that a $15 million special assessment was coming
+            &mdash; may have legal claims against their sellers and potentially
+            against the association itself for issuing incomplete disclosures.
+          </p>
+        </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 5: WARRANTABILITY -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">5</div>
+          <div class="section-title">
+            Mortgage & Insurance Impact: "Unwarrantable" Risk
+          </div>
+        </div>
+
+        <p>
+          Fannie Mae and Freddie Mac set strict requirements for condo projects
+          to be eligible for conventional mortgage financing. Buildings that
+          fail these standards become <strong>"non-warrantable"</strong> &mdash;
+          meaning buyers cannot obtain conventional mortgages, severely limiting
+          your buyer pool and depressing unit values.
+        </p>
+
+        <h3>How 2626 N Lakeview May Be At Risk</h3>
+
+        <div class="two-col">
+          <div class="fact-box alert" style="margin: 0">
+            <div class="fact-box-label">Safety & Soundness Trigger</div>
+            <p style="margin: 0; font-size: 13px">
+              Fannie Mae requires that if a special assessment is related to
+              safety, soundness, structural integrity, or habitability,
+              <strong>all related repairs must be fully completed</strong>
+              before units are eligible for conventional financing. The 2626 N
+              Lakeview switchboard replacement (triggered by a fire) and facade
+              repairs (addressing water infiltration and concrete deterioration)
+              likely trigger this requirement. Until both projects are complete
+              &mdash; projected end of 2027 &mdash; new buyers may be unable to
+              get conventional mortgages.
+            </p>
+          </div>
+          <div class="fact-box warning" style="margin: 0">
+            <div class="fact-box-label">$10,000 Per-Unit Threshold</div>
+            <p style="margin: 0; font-size: 13px">
+              Fannie Mae considers projects ineligible if there are unfunded
+              repairs exceeding $10,000 per unit related to safety, soundness,
+              or habitability within the next 12 months. The assessment averages
+              approximately <strong>$30,500 per unit</strong> for this
+              assessment alone &mdash; more than triple the threshold.
+              Additionally, if more than 15% of unit owners become 60+ days
+              delinquent on assessments, the entire project becomes ineligible.
+            </p>
+          </div>
+        </div>
+
+        <div class="fact-box warning" style="margin-top: 16px">
+          <div class="fact-box-label">Insurance Risk</div>
+          <p style="margin: 0">
+            Post-Surfside regulations have tightened insurance requirements
+            nationwide for buildings over 30 years old. Buildings with
+            documented deferred maintenance, active special assessments for
+            structural repairs, and inadequate reserves face premium increases
+            and potential coverage denials. This further threatens
+            warrantability, as Fannie Mae requires specific insurance minimums.
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION 6: WHAT SHOULD HAVE BEEN DONE -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">6</div>
+          <div class="section-title">
+            What Responsible Management Looks Like
+          </div>
+        </div>
+
+        <p>
+          The following is not aspirational &mdash; it is the standard of care
+          that condo associations across Chicago follow when properly managed.
+          Illinois is also moving toward making reserve studies mandatory every
+          5 years under proposed legislation (HB 2563).
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Industry Standard Replacement Cycle</th>
+              <th>What 2626 N Lakeview's Board Did</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Window sealant</strong></td>
+              <td>
+                Replace every 15&ndash;25 years. Budget $4&ndash;$8/linear foot
+                into reserves annually.
+              </td>
+              <td class="highlight">
+                Never replaced. 55+ years original. Spent millions on
+                ineffective patching instead.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Facade coatings</strong></td>
+              <td>Recoat every 10&ndash;15 years. Include in capital plan.</td>
+              <td class="highlight">
+                Applied 2011, already failed by ~2023. No recoating plan in
+                place.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Electrical switchgear</strong></td>
+              <td>
+                Plan replacement at 25&ndash;35 years. Begin design at year
+                20&ndash;25.
+              </td>
+              <td class="highlight">
+                Left in service 55+ years. Replacement triggered only by actual
+                fire.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Reserve funding</strong></td>
+              <td>
+                Maintain 70&ndash;100% funded ratio. Adjust contributions based
+                on reserve study.
+              </td>
+              <td class="highlight">
+                $6.5M reserves vs. $19M in critical needs = 34% funded.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Leak response</strong></td>
+              <td>
+                Identify root cause. Repair comprehensively. Avoid repeated
+                patching.
+              </td>
+              <td class="highlight">
+                10+ years of $600K&ndash;$1M/year "leak chasing" acknowledged as
+                ineffective.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SECTION 7: THE LOAN -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">7</div>
+          <div class="section-title">
+            The Loan Structure: Additional Concerns
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Locked Into One Lender</h3>
+            <p>
+              The building cannot shop for competitive rates because the
+              existing $28.6 million loan with Popular Bank has a prepayment
+              penalty. This is a direct consequence of the prior assessment's
+              loan structure. Owners are captive to whatever terms Popular
+              offers.
+            </p>
+          </div>
+          <div>
+            <h3>High Floor Rate</h3>
+            <p>
+              The 20-year term has a minimum interest rate of
+              <strong>6.95%</strong>, regardless of market conditions. Over 20
+              years at this rate, owners participating in the loan will pay
+              significantly more than the face value of their assessment share
+              in total interest.
+            </p>
+          </div>
+        </div>
+
+        <div class="fact-box warning">
+          <div class="fact-box-label">What This Means in Real Numbers</div>
+          <p style="margin: 0">
+            For a unit with a 0.25% ownership share: assessment = ~$37,500. Over
+            20 years at 6.95%, total payments including interest could exceed
+            <strong>$70,000</strong> &mdash; nearly double the principal.
+            Meanwhile, the building also deferred window replacement (another
+            $25M project the engineers recommended), which may produce yet
+            another special assessment in the future.
+          </p>
+        </div>
+
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 16px">
+          <em
+            >See Appendix A at the end of this bulletin for a detailed payment
+            estimate table organized by unit tier.</em
+          >
+        </p>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- PROJECT IMPACT: WHAT TO EXPECT -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number" style="background: var(--warning)">!</div>
+          <div class="section-title">
+            Project Impact: What Residents Should Expect
+          </div>
+        </div>
+
+        <p>
+          On March 12, 2026, management issued a notice confirming that exterior
+          facade repairs will begin <strong>March 17, 2026</strong>. The
+          contractor is
+          <strong>Bulley &amp; Andrews Masonry Restoration (BAMR)</strong>.
+          Below is a summary of what the project means for daily life at 2626 N
+          Lakeview.
+        </p>
+
+        <h3>Project Timeline</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Tiers Affected</th>
+              <th>Timeline</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Phase 1</strong></td>
+              <td>Tiers 04&ndash;12 (Drops C through L)</td>
+              <td>March 2026 &ndash; October 2026</td>
+            </tr>
+            <tr>
+              <td><strong>Phase 2</strong></td>
+              <td>Remaining tiers</td>
+              <td>March 2027 &ndash; October 2027</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="font-size: 13px; color: var(--text-muted)">
+          Weather and unforeseen conditions may cause delays. Work proceeds from
+          the top of each drop downward; exact floor-level timing cannot be
+          predicted.
+        </p>
+
+        <h3>Scope of Work</h3>
+        <p>
+          The facade project includes concrete and sealant repairs at exterior
+          walls, sealant replacement at windows and expansion joints,
+          installation of waterproof coatings at window topside slab edges, and
+          full repainting of all exterior concrete surfaces and window spandrel
+          panels. Operable/hopper window repairs will be handled by a separate
+          vendor from <strong>inside each unit</strong>, with access scheduled
+          in advance.
+        </p>
+
+        <div class="two-col">
+          <div class="fact-box alert" style="margin: 0">
+            <div class="fact-box-label">Noise &amp; Disruption</div>
+            <p style="margin: 0; font-size: 13px">
+              Demolition, grinding, drilling, tapping, and hammering will occur
+              <strong>8:00 AM &ndash; 4:00 PM, Monday through Friday</strong>.
+              Elevated noise begins the week of March 30 and may continue for
+              several weeks per drop depending on conditions.
+            </p>
+          </div>
+          <div class="fact-box warning" style="margin: 0">
+            <div class="fact-box-label">Windows &amp; Privacy</div>
+            <p style="margin: 0; font-size: 13px">
+              <strong>All windows must remain closed during work hours</strong>
+              due to dust and debris. Crews will be working directly outside
+              windows &mdash; residents should lower or adjust window coverings
+              for privacy. Views may be temporarily obstructed.
+            </p>
+          </div>
+        </div>
+
+        <div class="two-col" style="margin-top: 16px">
+          <div class="fact-box" style="margin: 0">
+            <div class="fact-box-label">Precautions for Your Unit</div>
+            <p style="margin: 0; font-size: 13px">
+              Remove items from walls, shelves, and tables during work hours
+              &mdash; vibration may cause small objects to shift or fall. The
+              association and contractor assume
+              <strong>no liability</strong> for dust entering units or damages
+              from vibration.
+            </p>
+          </div>
+          <div class="fact-box" style="margin: 0">
+            <div class="fact-box-label">Building Access &amp; Amenities</div>
+            <p style="margin: 0; font-size: 13px">
+              Protective sidewalk canopies will be installed over the Lakeview
+              Ave entrance, driveways, garage entry/exit, and loading dock. The
+              <strong>pool deck and sundeck are closed</strong> beginning March
+              17 until penthouse repairs are complete (est. end of May 2026).
+            </p>
+          </div>
+        </div>
+
+        <div class="fact-box warning" style="margin-top: 16px">
+          <div class="fact-box-label">Keep Everyone Informed</div>
+          <p style="margin: 0">
+            Management asks residents to make family members, housekeepers,
+            caregivers, and visitors aware of the project, its commencement
+            date, and the precautionary measures above. Updates will be provided
+            via e-bulletins and a visual project board in the lobby.
+          </p>
+        </div>
+
+        <p style="font-size: 11px; color: var(--text-muted); margin-top: 12px">
+          <em
+            >Source: Building management notice to residents, March 12, 2026
+            (Sandy Fiore, LCAM, CMCA, AMS, ARM &mdash; Community Association
+            Manager, Sudler Property Management).</em
+          >
+        </p>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- APPENDIX A: PAYMENT ESTIMATES BY UNIT TIER -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-number">A</div>
+          <div class="section-title">
+            Appendix: Estimated Monthly Payment by Unit Tier
+          </div>
+        </div>
+
+        <p>
+          Each floor at 2626 N Lakeview has up to 12 unit positions (tiers),
+          each with a different square footage and ownership percentage. Your
+          tier is determined by the last two digits of your unit number (e.g.,
+          unit 1508 is Tier 08). The table below uses the loan terms discussed
+          in the March 2026 meeting to estimate monthly payments:
+          <strong>$15 million total, 6.95% floor rate, 20-year term</strong>.
+        </p>
+
+        <div class="fact-box warning" style="margin-bottom: 20px">
+          <div class="fact-box-label">Simplified Example Only</div>
+          <p style="margin: 0">
+            This is an <strong>illustrative estimate</strong>, not a final
+            payment schedule. The 6.95% is a <em>floor</em> rate &mdash; it may
+            go higher. Fees, closing costs, and final loan terms are not
+            reflected. Owners who pay their assessment share in full upfront
+            avoid all interest. Consult the final loan documents for exact
+            obligations.
+          </p>
+        </div>
+
+        <h3>Standard Units (12 Tiers Per Floor)</h3>
+        <p
+          style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px"
+        >
+          Find your tier by the last digits of your unit number. For example:
+          Unit 2408 = Tier 08.
+        </p>
+
+        <table class="comparison-table appendix-table" style="font-size: 12px">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Unit Positions</th>
+              <th>Ownership %</th>
+              <th>Assessment</th>
+              <th>Monthly Payment</th>
+              <th>Total Paid (20 yr)</th>
+              <th>Total Interest</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>01</strong></td>
+              <td>x01 (e.g., 201, 1501, 3801)</td>
+              <td>0.239%</td>
+              <td>$35,850</td>
+              <td class="highlight">$276.87</td>
+              <td>$66,449</td>
+              <td class="highlight">$30,599</td>
+            </tr>
+            <tr>
+              <td><strong>02</strong></td>
+              <td>x02 (e.g., 202, 1502, 3802)</td>
+              <td>0.268%</td>
+              <td>$40,200</td>
+              <td class="highlight">$310.46</td>
+              <td>$74,512</td>
+              <td class="highlight">$34,312</td>
+            </tr>
+            <tr>
+              <td><strong>03</strong></td>
+              <td>x03 (e.g., 203, 1503, 3803)</td>
+              <td>0.370%</td>
+              <td>$55,500</td>
+              <td class="highlight">$428.63</td>
+              <td>$102,870</td>
+              <td class="highlight">$47,370</td>
+            </tr>
+            <tr>
+              <td><strong>04</strong></td>
+              <td>x04 (e.g., 204, 1504, 3804)</td>
+              <td>0.173%</td>
+              <td>$25,950</td>
+              <td class="highlight">$200.41</td>
+              <td>$48,099</td>
+              <td class="highlight">$22,149</td>
+            </tr>
+            <tr>
+              <td><strong>05</strong></td>
+              <td>x05 (e.g., 205, 1505, 3805)</td>
+              <td>0.164%</td>
+              <td>$24,600</td>
+              <td class="highlight">$189.99</td>
+              <td>$45,597</td>
+              <td class="highlight">$20,997</td>
+            </tr>
+            <tr>
+              <td><strong>06</strong></td>
+              <td>x06 (e.g., 206, 1506, 3806)</td>
+              <td>0.113%</td>
+              <td>$16,950</td>
+              <td class="highlight">$130.90</td>
+              <td>$31,417</td>
+              <td class="highlight">$14,467</td>
+            </tr>
+            <tr>
+              <td><strong>07</strong></td>
+              <td>x07 (e.g., 207, 1507, 3807)</td>
+              <td>0.169%</td>
+              <td>$25,350</td>
+              <td class="highlight">$195.78</td>
+              <td>$46,987</td>
+              <td class="highlight">$21,637</td>
+            </tr>
+            <tr>
+              <td><strong>08</strong></td>
+              <td>x08 (e.g., 208, 1508, 3808)</td>
+              <td>0.270%</td>
+              <td>$40,500</td>
+              <td class="highlight">$312.78</td>
+              <td>$75,068</td>
+              <td class="highlight">$34,568</td>
+            </tr>
+            <tr>
+              <td><strong>09</strong></td>
+              <td>x09 (e.g., 209, 1509, 3809)</td>
+              <td>0.148%</td>
+              <td>$22,200</td>
+              <td class="highlight">$171.45</td>
+              <td>$41,148</td>
+              <td class="highlight">$18,948</td>
+            </tr>
+            <tr>
+              <td><strong>10</strong></td>
+              <td>x10 (e.g., 210, 1510, 3810)</td>
+              <td>0.113%</td>
+              <td>$16,950</td>
+              <td class="highlight">$130.90</td>
+              <td>$31,417</td>
+              <td class="highlight">$14,467</td>
+            </tr>
+            <tr>
+              <td><strong>11</strong></td>
+              <td>x11 (e.g., 211, 1511, 3811)</td>
+              <td>0.155%</td>
+              <td>$23,250</td>
+              <td class="highlight">$179.56</td>
+              <td>$43,094</td>
+              <td class="highlight">$19,844</td>
+            </tr>
+            <tr>
+              <td><strong>12</strong></td>
+              <td>x12 (e.g., 212, 1512, 3812)</td>
+              <td>0.257%</td>
+              <td>$38,550</td>
+              <td class="highlight">$297.72</td>
+              <td>$71,453</td>
+              <td class="highlight">$32,903</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Combined Units (Two or More Tiers Merged)</h3>
+        <p
+          style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px"
+        >
+          Some units in the building have been combined, resulting in higher
+          ownership percentages and correspondingly larger assessment shares.
+        </p>
+
+        <table class="comparison-table appendix-table" style="font-size: 12px">
+          <thead>
+            <tr>
+              <th>Tiers Combined</th>
+              <th>Example Units</th>
+              <th>Ownership %</th>
+              <th>Assessment</th>
+              <th>Monthly Payment</th>
+              <th>Total Paid (20 yr)</th>
+              <th>Total Interest</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>02 + 03</strong></td>
+              <td>302/03, 1802/03, 4202/03</td>
+              <td>0.638%</td>
+              <td>$95,700</td>
+              <td class="highlight">$739.09</td>
+              <td>$177,382</td>
+              <td class="highlight">$81,682</td>
+            </tr>
+            <tr>
+              <td><strong>02 + 03*</strong></td>
+              <td>3103 (incl. 3102)</td>
+              <td>0.639%</td>
+              <td>$95,850</td>
+              <td class="highlight">$740.25</td>
+              <td>$177,660</td>
+              <td class="highlight">$81,810</td>
+            </tr>
+            <tr>
+              <td><strong>03 + 04</strong></td>
+              <td>2203/04, 3203/04</td>
+              <td>0.543%</td>
+              <td>$81,450</td>
+              <td class="highlight">$629.04</td>
+              <td>$150,969</td>
+              <td class="highlight">$69,519</td>
+            </tr>
+            <tr>
+              <td><strong>06 + 07 + 08</strong></td>
+              <td>1406/07/08, 3506/07/08</td>
+              <td>0.552%</td>
+              <td>$82,800</td>
+              <td class="highlight">$639.46</td>
+              <td>$153,472</td>
+              <td class="highlight">$70,672</td>
+            </tr>
+            <tr>
+              <td><strong>06 + 08</strong></td>
+              <td>2606/08, 4106/08</td>
+              <td>0.383%</td>
+              <td>$57,450</td>
+              <td class="highlight">$443.69</td>
+              <td>$106,485</td>
+              <td class="highlight">$49,035</td>
+            </tr>
+            <tr>
+              <td><strong>07 + 08</strong></td>
+              <td>1907/08, 2507/08, 3007/08, 3107/08, 3207/08</td>
+              <td>0.439%</td>
+              <td>$65,850</td>
+              <td class="highlight">$508.56</td>
+              <td>$122,054</td>
+              <td class="highlight">$56,204</td>
+            </tr>
+            <tr>
+              <td><strong>10 + 12</strong></td>
+              <td>710/12, 2710/12, 4110/12</td>
+              <td>0.370%</td>
+              <td>$55,500</td>
+              <td class="highlight">$428.63</td>
+              <td>$102,870</td>
+              <td class="highlight">$47,370</td>
+            </tr>
+            <tr>
+              <td><strong>10 + 11 + 12</strong></td>
+              <td>3510/11/12</td>
+              <td>0.525%</td>
+              <td>$78,750</td>
+              <td class="highlight">$608.19</td>
+              <td>$145,965</td>
+              <td class="highlight">$67,215</td>
+            </tr>
+            <tr>
+              <td><strong>11 + 12</strong></td>
+              <td>511/12, 1811/12, 2611/12, 3311/12</td>
+              <td>0.412%</td>
+              <td>$61,800</td>
+              <td class="highlight">$477.28</td>
+              <td>$114,548</td>
+              <td class="highlight">$52,748</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="fact-box alert" style="margin-top: 20px">
+          <div class="fact-box-label">Important Disclaimer</div>
+          <p style="margin: 0">
+            This appendix is a
+            <strong>simplified illustrative example only</strong> using standard
+            amortization at the 6.95% floor rate discussed in the March 2026 HOA
+            meeting. Actual loan terms have not been finalized. The rate is a
+            <em>floor</em> &mdash; it may go higher. Additional fees, closing
+            costs, and any changes to the loan structure are not reflected.
+            Owners who pay their assessment share in full upfront would avoid
+            all interest charges. The ownership percentages shown are from the
+            association's official records; combined units reflect recorded
+            mergers. Consult the final loan documents and your financial advisor
+            for exact payment obligations.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="fact-box alert" style="margin-top:20px">
-      <div class="fact-box-label">Project Now Underway</div>
-      <p style="margin:0">As of <strong>March 17, 2026</strong>, facade repair work has commenced. The contractor, <strong>Bulley &amp; Andrews Masonry Restoration (BAMR)</strong>, has begun mobilization and rigging. Phase 1 (tiers 04&ndash;12) runs through October 2026; Phase 2 resumes March&ndash;October 2027. The pool deck and sundeck are closed until penthouse repairs finish (est. May 2026). <em>See the Project Impact page at the end of this bulletin for full details on what to expect.</em></p>
-    </div>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- SECTION 2: HOW WE GOT HERE -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">2</div>
-      <div class="section-title">How Deferred Maintenance Created This Crisis</div>
-    </div>
-
-    <p>Every major component in a high-rise has a known useful life. Responsible management plans and funds for replacements on predictable cycles. Here's what happened instead:</p>
-
-    <div class="timeline">
-      <div class="timeline-item neutral">
-        <div class="timeline-date">Late 1960s</div>
-        <p>Building constructed with original window sealant, switchboard, and hopper windows.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">1985&ndash;1995 (estimated)</div>
-        <p><strong>Window sealant should have been replaced</strong> the first time. Industry standard useful life: 15&ndash;25 years. No comprehensive replacement was ever done.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">1995&ndash;2005 (estimated)</div>
-        <p><strong>Electrical switchgear should have been evaluated for replacement.</strong> Useful life of commercial switchgear: 25&ndash;35 years. No replacement was planned.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2011&ndash;2012</div>
-        <p>Water infiltration reports begin. Building starts annual "leak chasing" at <strong>$600K&ndash;$1M per year</strong> &mdash; acknowledged as ineffective by the board's own consultants.</p>
-      </div>
-      <div class="timeline-item neutral">
-        <div class="timeline-date">2011</div>
-        <p>Concrete coatings applied. These are now described as "way past their useful life" &mdash; just ~12 years later.</p>
-      </div>
-      <div class="timeline-item neutral">
-        <div class="timeline-date">2019</div>
-        <p>300+ page Capital Improvement Report prepared identifying major needs.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2021</div>
-        <p><strong>First special assessment: ~$28.6 million</strong> for domestic water risers and other work. Loan from Popular Bank still being repaid.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">November 2024</div>
-        <p><strong>Electrical fire in the chiller room.</strong> Complete building power failure. Near-evacuation. Investigation reveals switchboard is damaged beyond repair.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2025&ndash;2026</div>
-        <p><strong>Second special assessment: $15 million</strong> proposed for facade and switchboard. Three forensic engineering firms confirm comprehensive facade repair is required.</p>
-      </div>
-    </div>
-
-    <div class="fact-box alert">
-      <div class="fact-box-label">Key Finding</div>
-      <p style="margin:0"><strong>An estimated $5&ndash;$10 million was spent on ineffective "leak chasing"</strong> over the past decade. The board's own owner's representative acknowledged this approach "is really not effective." That money, applied to a comprehensive solution years earlier, could have significantly reduced the current assessment.</p>
-    </div>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- SECTION 3: HOW THIS COMPARES (Page 3) -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">3</div>
-      <div class="section-title">How 2626 N Lakeview Compares to Chicago Norms</div>
+    <!-- SOURCES -->
+    <div class="source-list" style="padding: 24px 48px">
+      <strong>Sources &amp; References</strong><br />
+      <em>Mikulecky v. Bart</em>, 355 Ill. App. 3d 1006 (1st Dist. 2004) &mdash;
+      <a
+        href="http://www.illinoiscourts.gov/Opinions/AppellateCourt/2004/1stDistrict/December/Html/1030378.htm"
+        >Full Opinion</a
+      ><br />
+      Illinois Condominium Property Act, 765 ILCS 605/22.1 &mdash;
+      <a
+        href="https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=076506050K22.1"
+        >Full Text</a
+      ><br />
+      BRK Chicago, "22.1 Disclosures: Avoid Liability by Including Anticipated
+      Expenditures" &mdash;
+      <a
+        href="https://www.brkchicago.com/legal-tips-22-1-disclosures-avoid-liability-by-including-anticipated-expenditures/"
+        >Article</a
+      ><br />
+      KSN Law, "22.1 Disclosures in Illinois Community Associations" &mdash;
+      <a
+        href="https://www.ksnlaw.com/blog/221-disclosures-illinois-community-associations/"
+        >Article</a
+      ><br />
+      Fannie Mae Selling Guide B4-2.2-02, "Full Review Process" &mdash;
+      <a
+        href="https://selling-guide.fanniemae.com/sel/b4-2.2-02/full-review-process"
+        >Guide</a
+      ><br />
+      Fannie Mae Lender Letter LL-2021-14, "Temporary Requirements for
+      Condominiums" &mdash;
+      <a href="https://singlefamily.fanniemae.com/media/29411/display">PDF</a
+      ><br />
+      CAI-IL, "Association Disclosures Under Section 22.1" &mdash;
+      <a
+        href="https://www.cai-illinois.org/association-disclosures-section-22-1-illinois-condominium-property-act/"
+        >Article</a
+      ><br />
+      IL HOA Law Blog, "Prepare your Condo for New Fannie Mae Requirements"
+      &mdash;
+      <a
+        href="https://ilhoalaw.com/2022/01/06/prepare-your-condo-for-the-new-fannie-mae-and-freddie-mac-lending-requirements/"
+        >Article</a
+      ><br />
+      Rudolph Kaplan, "Condo Deferred Maintenance After Surfside" &mdash;
+      <a
+        href="https://rudolphkaplan.com/blog/2021/12/29/condo-deferred-maintenance-after-surfside"
+        >Article</a
+      ><br />
+      KSN Law, "New Reserve Study Requirements for Illinois" &mdash;
+      <a
+        href="https://www.ksnlaw.com/blog/reserve-study-requirements-illinois-community-associations-2025/"
+        >Article</a
+      ><br />
+      Dickler Law, "Can Illinois Condo Boards Be Sued for Underfunded Reserves?"
+      &mdash;
+      <a
+        href="https://www.dicklerlaw.com/blog/can-illinois-condo-boards-be-sued-for-underfunded-reserves"
+        >Article</a
+      ><br />
+      HOA Meeting Recording Transcript, March 9, 2026<br />
+      Building Management Notice to Residents re: Facade Project Commencement,
+      March 12, 2026 (Sandy Fiore, Sudler Property Management)
     </div>
 
-    <p>Chicago's aging high-rise inventory faces widespread deferred maintenance, but 2626 N Lakeview's financial burden significantly exceeds city averages.</p>
-
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Metric</th>
-          <th>2626 N Lakeview</th>
-          <th>Well-Managed Chicago High-Rise</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Special assessments in 5 years</td>
-          <td class="highlight">~$88,800/unit (combined)</td>
-          <td class="good">$0 &ndash; $5,000/unit</td>
-        </tr>
-        <tr>
-          <td>Reserve fund adequacy</td>
-          <td class="highlight">$6.5M for $19M in needs (34%)</td>
-          <td class="good">70&ndash;100% funded</td>
-        </tr>
-        <tr>
-          <td>Annual reserve contribution</td>
-          <td>~$4,070/unit/year</td>
-          <td class="good">$4,000&ndash;$8,000+/unit/year</td>
-        </tr>
-        <tr>
-          <td>Window sealant replacement cycle</td>
-          <td class="highlight">Never replaced (55+ years)</td>
-          <td class="good">Every 15&ndash;25 years</td>
-        </tr>
-        <tr>
-          <td>Switchgear replacement planning</td>
-          <td class="highlight">Triggered by fire (55+ years old)</td>
-          <td class="good">Planned replacement at 25&ndash;35 years</td>
-        </tr>
-        <tr>
-          <td>Facade maintenance approach</td>
-          <td class="highlight">Reactive leak chasing ($600K&ndash;$1M/yr wasted)</td>
-          <td class="good">Scheduled comprehensive cycles</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="fact-box">
-      <div class="fact-box-label">Chicago Context</div>
-      <p style="margin:0">Chicago's facade ordinance requires buildings over 80 feet to undergo periodic inspections and mandatory repairs. Well-managed buildings budget for these known cycles. Many 1960s-era Chicago high-rises have completed facade rehabilitation projects for $5M&ndash;$15M &mdash; but they spread the cost over time through adequate reserves rather than shock assessments.</p>
+    <div class="footer">
+      <strong>2626 N Lakeview Ave, Chicago, IL</strong> &mdash;
+      <strong>Disclaimer:</strong> This document is prepared by a unit owner of
+      2626 N Lakeview Ave for informational purposes only. It is not legal
+      advice. The facts presented are drawn from the official HOA meeting
+      recording of March 9, 2026, publicly available legal opinions, and
+      published industry standards. Owners considering legal action should
+      consult a licensed Illinois attorney experienced in condominium law. All
+      Illinois statute citations and case law references are verifiable through
+      the linked sources above. <br /><a
+        href="privacy.html"
+        style="
+          color: rgba(255, 255, 255, 0.5);
+          text-decoration: none;
+          font-size: 11px;
+        "
+        >Privacy Policy</a
+      >
     </div>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- SECTION 4: LEGAL & FINANCIAL RISKS (Page 4) -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">4</div>
-      <div class="section-title">Legal Risks: 22.1 Disclosures & Your Liability</div>
-    </div>
-
-    <p>Section 22.1 of the Illinois Condominium Property Act requires associations to disclose to prospective buyers any capital expenditures <strong>anticipated</strong> within the current or succeeding two fiscal years. This is not optional. Failure to disclose carries real legal consequences.</p>
-
-    <div class="legal-ref">
-      <div class="legal-ref-title">Mikulecky v. Bart, 355 Ill. App. 3d 1006 (2004)</div>
-      <p>In this landmark Illinois appellate case, a condo buyer sued after the 22.1 disclosure listed only formally approved capital expenditures but omitted projects that had been discussed and planned by the board. The buyer discovered over $10,000 in special assessments shortly after closing. The court ruled that the statute requires disclosure of <strong>"anticipated"</strong> expenditures &mdash; not merely those already approved. The court held that giving the word its "plain and ordinary meaning" required disclosure of projects the board knew about, even if not yet formally voted on.</p>
-    </div>
-
-    <h3>What This Means For You as a Seller</h3>
-    <p>If you sold your unit while the board was actively investigating, discussing, or planning these projects &mdash; and the 22.1 did not disclose them as anticipated capital expenditures &mdash; <strong>you may face legal liability to your buyer.</strong> The board acknowledged in the March 2026 meeting that these issues have been under discussion for years, with a 2019 Capital Improvement Report identifying the needs and forensic engineering investigations ongoing since at least 2024.</p>
-
-    <div class="fact-box alert">
-      <div class="fact-box-label">Critical Question for the Board</div>
-      <p style="margin:0">Were the 22.1 disclosure statements issued over the past several years updated to reflect these anticipated capital expenditures? The board's own attorney stated in the meeting that "these repairs were mentioned in the 22.1 for an extended period of time, but the costs were undetermined." If the disclosures were vague or incomplete, owners who recently sold could face claims from their buyers &mdash; and the association itself could face challenges collecting the assessment from new owners.</p>
-    </div>
-
-    <div class="legal-ref">
-      <div class="legal-ref-title">BRK Chicago Law Firm Advisory on 22.1 Disclosures</div>
-      <p>"Failure to properly disclose an anticipated expenditure may affect the association's ability to collect a special assessment for the expenditure once approved by the Board of Directors." Associations are advised to err on the side of over-disclosure, including estimated cost ranges even when final costs are not yet determined.</p>
-    </div>
-
-    <h3>What Recent 22.1 Disclosures Actually Reveal</h3>
-    <p>Owners should be aware that 22.1 resale certificates issued by the association's management company in recent years appear to have <strong>substantially understated</strong> anticipated capital expenditures &mdash; even after the board had clear knowledge of the scope and scale of the work now being assessed.</p>
-
-    <p>A review of 22.1 disclosures prepared by Sudler Property Management in the spring of 2025 reveals the following pattern:</p>
-
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Project</th>
-          <th>Disclosed in 22.1 (Spring 2025)</th>
-          <th>Actual Cost Announced (March 2026)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Facade / Exterior Envelope</strong></td>
-          <td>~$1M&ndash;$1.5M/year listed as "Exterior Sealant/Concrete Repair"</td>
-          <td class="highlight">$11 Million comprehensive facade repair</td>
-        </tr>
-        <tr>
-          <td><strong>Switchboard Replacement</strong></td>
-          <td class="highlight">Not mentioned at all</td>
-          <td class="highlight">$8 Million full replacement</td>
-        </tr>
-        <tr>
-          <td><strong>Special Assessment</strong></td>
-          <td class="highlight">Not mentioned</td>
-          <td class="highlight">$15 Million special assessment</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="fact-box alert">
-      <div class="fact-box-label">The Switchboard Omission</div>
-      <p style="margin:0">The building suffered a catastrophic electrical fire in <strong>November 2024</strong> that caused total power loss and near-evacuation. Yet 22.1 disclosures prepared <strong>five months later</strong>, in spring 2025, contain <strong>no mention whatsoever</strong> of the switchboard replacement project, its estimated $8 million cost, or the fire that triggered it. The board and management knew the original 1960s switchboard was damaged beyond repair. This was not speculative &mdash; it was an established emergency. A buyer relying on this disclosure would have had no indication that this project existed.</p>
-    </div>
-
-    <div class="fact-box alert">
-      <div class="fact-box-label">The Facade Understatement</div>
-      <p style="margin:0">The 22.1 lists modest annual facade line items totaling roughly $3.6 million across three fiscal years &mdash; labeled as routine "Exterior Sealant/Concrete Repair." In reality, the board had already retained <strong>three forensic engineering firms</strong> to evaluate a comprehensive facade failure, had a 300+ page Capital Improvement Report from 2019 documenting the need, and had spent years and millions in ineffective leak remediation. The actual project announced less than a year later: <strong>$11 million</strong>. The disclosed figures understate the true anticipated cost by more than $7 million.</p>
-    </div>
-
-    <div class="fact-box warning">
-      <div class="fact-box-label">The Catch-All Disclaimer Is Not a Defense</div>
-      <p style="margin:0">The 22.1 includes a generic statement that "other capital expenditures... may be required in the coming years" and that "whether any additional capital expenditures will be made... is unknown at this time." Under <em>Mikulecky v. Bart</em>, this kind of vague catch-all does not satisfy the statutory obligation. The court made clear that "anticipated" means what the board actually knew about &mdash; and a blanket disclaimer cannot substitute for specific disclosure of projects the board was actively investigating, engineering, and pricing. <strong>This disclosure gap exposes both the association and individual sellers to significant legal risk.</strong> Buyers who purchased units in reliance on these 22.1 disclosures &mdash; unaware that a $15 million special assessment was coming &mdash; may have legal claims against their sellers and potentially against the association itself for issuing incomplete disclosures.</p>
-    </div>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- SECTION 5: WARRANTABILITY -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">5</div>
-      <div class="section-title">Mortgage & Insurance Impact: "Unwarrantable" Risk</div>
-    </div>
-
-    <p>Fannie Mae and Freddie Mac set strict requirements for condo projects to be eligible for conventional mortgage financing. Buildings that fail these standards become <strong>"non-warrantable"</strong> &mdash; meaning buyers cannot obtain conventional mortgages, severely limiting your buyer pool and depressing unit values.</p>
-
-    <h3>How 2626 N Lakeview May Be At Risk</h3>
-
-    <div class="two-col">
-      <div class="fact-box alert" style="margin:0">
-        <div class="fact-box-label">Safety & Soundness Trigger</div>
-        <p style="margin:0;font-size:13px">Fannie Mae requires that if a special assessment is related to safety, soundness, structural integrity, or habitability, <strong>all related repairs must be fully completed</strong> before units are eligible for conventional financing. The 2626 N Lakeview switchboard replacement (triggered by a fire) and facade repairs (addressing water infiltration and concrete deterioration) likely trigger this requirement. Until both projects are complete &mdash; projected end of 2027 &mdash; new buyers may be unable to get conventional mortgages.</p>
-      </div>
-      <div class="fact-box warning" style="margin:0">
-        <div class="fact-box-label">$10,000 Per-Unit Threshold</div>
-        <p style="margin:0;font-size:13px">Fannie Mae considers projects ineligible if there are unfunded repairs exceeding $10,000 per unit related to safety, soundness, or habitability within the next 12 months. The assessment averages approximately <strong>$30,500 per unit</strong> for this assessment alone &mdash; more than triple the threshold. Additionally, if more than 15% of unit owners become 60+ days delinquent on assessments, the entire project becomes ineligible.</p>
-      </div>
-    </div>
-
-    <div class="fact-box warning" style="margin-top:16px">
-      <div class="fact-box-label">Insurance Risk</div>
-      <p style="margin:0">Post-Surfside regulations have tightened insurance requirements nationwide for buildings over 30 years old. Buildings with documented deferred maintenance, active special assessments for structural repairs, and inadequate reserves face premium increases and potential coverage denials. This further threatens warrantability, as Fannie Mae requires specific insurance minimums.</p>
-    </div>
-  </div>
-
-  <!-- SECTION 6: WHAT SHOULD HAVE BEEN DONE -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">6</div>
-      <div class="section-title">What Responsible Management Looks Like</div>
-    </div>
-
-    <p>The following is not aspirational &mdash; it is the standard of care that condo associations across Chicago follow when properly managed. Illinois is also moving toward making reserve studies mandatory every 5 years under proposed legislation (HB 2563).</p>
-
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Industry Standard Replacement Cycle</th>
-          <th>What 2626 N Lakeview's Board Did</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Window sealant</strong></td>
-          <td>Replace every 15&ndash;25 years. Budget $4&ndash;$8/linear foot into reserves annually.</td>
-          <td class="highlight">Never replaced. 55+ years original. Spent millions on ineffective patching instead.</td>
-        </tr>
-        <tr>
-          <td><strong>Facade coatings</strong></td>
-          <td>Recoat every 10&ndash;15 years. Include in capital plan.</td>
-          <td class="highlight">Applied 2011, already failed by ~2023. No recoating plan in place.</td>
-        </tr>
-        <tr>
-          <td><strong>Electrical switchgear</strong></td>
-          <td>Plan replacement at 25&ndash;35 years. Begin design at year 20&ndash;25.</td>
-          <td class="highlight">Left in service 55+ years. Replacement triggered only by actual fire.</td>
-        </tr>
-        <tr>
-          <td><strong>Reserve funding</strong></td>
-          <td>Maintain 70&ndash;100% funded ratio. Adjust contributions based on reserve study.</td>
-          <td class="highlight">$6.5M reserves vs. $19M in critical needs = 34% funded.</td>
-        </tr>
-        <tr>
-          <td><strong>Leak response</strong></td>
-          <td>Identify root cause. Repair comprehensively. Avoid repeated patching.</td>
-          <td class="highlight">10+ years of $600K&ndash;$1M/year "leak chasing" acknowledged as ineffective.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- SECTION 7: THE LOAN -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">7</div>
-      <div class="section-title">The Loan Structure: Additional Concerns</div>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <h3>Locked Into One Lender</h3>
-        <p>The building cannot shop for competitive rates because the existing $28.6 million loan with Popular Bank has a prepayment penalty. This is a direct consequence of the prior assessment's loan structure. Owners are captive to whatever terms Popular offers.</p>
-      </div>
-      <div>
-        <h3>High Floor Rate</h3>
-        <p>The 20-year term has a minimum interest rate of <strong>6.95%</strong>, regardless of market conditions. Over 20 years at this rate, owners participating in the loan will pay significantly more than the face value of their assessment share in total interest.</p>
-      </div>
-    </div>
-
-    <div class="fact-box warning">
-      <div class="fact-box-label">What This Means in Real Numbers</div>
-      <p style="margin:0">For a unit with a 0.25% ownership share: assessment = ~$37,500. Over 20 years at 6.95%, total payments including interest could exceed <strong>$70,000</strong> &mdash; nearly double the principal. Meanwhile, the building also deferred window replacement (another $25M project the engineers recommended), which may produce yet another special assessment in the future.</p>
-    </div>
-
-    <p style="font-size:13px; color:var(--text-muted); margin-top:16px"><em>See Appendix A at the end of this bulletin for a detailed payment estimate table organized by unit tier.</em></p>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- PROJECT IMPACT: WHAT TO EXPECT -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number" style="background:var(--warning)">!</div>
-      <div class="section-title">Project Impact: What Residents Should Expect</div>
-    </div>
-
-    <p>On March 12, 2026, management issued a notice confirming that exterior facade repairs will begin <strong>March 17, 2026</strong>. The contractor is <strong>Bulley &amp; Andrews Masonry Restoration (BAMR)</strong>. Below is a summary of what the project means for daily life at 2626 N Lakeview.</p>
-
-    <h3>Project Timeline</h3>
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Phase</th>
-          <th>Tiers Affected</th>
-          <th>Timeline</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Phase 1</strong></td>
-          <td>Tiers 04&ndash;12 (Drops C through L)</td>
-          <td>March 2026 &ndash; October 2026</td>
-        </tr>
-        <tr>
-          <td><strong>Phase 2</strong></td>
-          <td>Remaining tiers</td>
-          <td>March 2027 &ndash; October 2027</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p style="font-size:13px; color:var(--text-muted)">Weather and unforeseen conditions may cause delays. Work proceeds from the top of each drop downward; exact floor-level timing cannot be predicted.</p>
-
-    <h3>Scope of Work</h3>
-    <p>The facade project includes concrete and sealant repairs at exterior walls, sealant replacement at windows and expansion joints, installation of waterproof coatings at window topside slab edges, and full repainting of all exterior concrete surfaces and window spandrel panels. Operable/hopper window repairs will be handled by a separate vendor from <strong>inside each unit</strong>, with access scheduled in advance.</p>
-
-    <div class="two-col">
-      <div class="fact-box alert" style="margin:0">
-        <div class="fact-box-label">Noise &amp; Disruption</div>
-        <p style="margin:0;font-size:13px">Demolition, grinding, drilling, tapping, and hammering will occur <strong>8:00 AM &ndash; 4:00 PM, Monday through Friday</strong>. Elevated noise begins the week of March 30 and may continue for several weeks per drop depending on conditions.</p>
-      </div>
-      <div class="fact-box warning" style="margin:0">
-        <div class="fact-box-label">Windows &amp; Privacy</div>
-        <p style="margin:0;font-size:13px"><strong>All windows must remain closed during work hours</strong> due to dust and debris. Crews will be working directly outside windows &mdash; residents should lower or adjust window coverings for privacy. Views may be temporarily obstructed.</p>
-      </div>
-    </div>
-
-    <div class="two-col" style="margin-top:16px">
-      <div class="fact-box" style="margin:0">
-        <div class="fact-box-label">Precautions for Your Unit</div>
-        <p style="margin:0;font-size:13px">Remove items from walls, shelves, and tables during work hours &mdash; vibration may cause small objects to shift or fall. The association and contractor assume <strong>no liability</strong> for dust entering units or damages from vibration.</p>
-      </div>
-      <div class="fact-box" style="margin:0">
-        <div class="fact-box-label">Building Access &amp; Amenities</div>
-        <p style="margin:0;font-size:13px">Protective sidewalk canopies will be installed over the Lakeview Ave entrance, driveways, garage entry/exit, and loading dock. The <strong>pool deck and sundeck are closed</strong> beginning March 17 until penthouse repairs are complete (est. end of May 2026).</p>
-      </div>
-    </div>
-
-    <div class="fact-box warning" style="margin-top:16px">
-      <div class="fact-box-label">Keep Everyone Informed</div>
-      <p style="margin:0">Management asks residents to make family members, housekeepers, caregivers, and visitors aware of the project, its commencement date, and the precautionary measures above. Updates will be provided via e-bulletins and a visual project board in the lobby.</p>
-    </div>
-
-    <p style="font-size:11px; color:var(--text-muted); margin-top:12px"><em>Source: Building management notice to residents, March 12, 2026 (Sandy Fiore, LCAM, CMCA, AMS, ARM &mdash; Community Association Manager, Sudler Property Management).</em></p>
-  </div>
-
-  <div class="page-break"></div>
-
-  <!-- APPENDIX A: PAYMENT ESTIMATES BY UNIT TIER -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-number">A</div>
-      <div class="section-title">Appendix: Estimated Monthly Payment by Unit Tier</div>
-    </div>
-
-    <p>Each floor at 2626 N Lakeview has up to 12 unit positions (tiers), each with a different square footage and ownership percentage. Your tier is determined by the last two digits of your unit number (e.g., unit 1508 is Tier 08). The table below uses the loan terms discussed in the March 2026 meeting to estimate monthly payments: <strong>$15 million total, 6.95% floor rate, 20-year term</strong>.</p>
-
-    <div class="fact-box warning" style="margin-bottom:20px">
-      <div class="fact-box-label">Simplified Example Only</div>
-      <p style="margin:0">This is an <strong>illustrative estimate</strong>, not a final payment schedule. The 6.95% is a <em>floor</em> rate &mdash; it may go higher. Fees, closing costs, and final loan terms are not reflected. Owners who pay their assessment share in full upfront avoid all interest. Consult the final loan documents for exact obligations.</p>
-    </div>
-
-    <h3>Standard Units (12 Tiers Per Floor)</h3>
-    <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px">Find your tier by the last digits of your unit number. For example: Unit 2408 = Tier 08.</p>
-
-    <table class="comparison-table appendix-table" style="font-size:12px">
-      <thead>
-        <tr>
-          <th>Tier</th>
-          <th>Unit Positions</th>
-          <th>Ownership %</th>
-          <th>Assessment</th>
-          <th>Monthly Payment</th>
-          <th>Total Paid (20 yr)</th>
-          <th>Total Interest</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>01</strong></td>
-          <td>x01 (e.g., 201, 1501, 3801)</td>
-          <td>0.239%</td>
-          <td>$35,850</td>
-          <td class="highlight">$276.87</td>
-          <td>$66,449</td>
-          <td class="highlight">$30,599</td>
-        </tr>
-        <tr>
-          <td><strong>02</strong></td>
-          <td>x02 (e.g., 202, 1502, 3802)</td>
-          <td>0.268%</td>
-          <td>$40,200</td>
-          <td class="highlight">$310.46</td>
-          <td>$74,512</td>
-          <td class="highlight">$34,312</td>
-        </tr>
-        <tr>
-          <td><strong>03</strong></td>
-          <td>x03 (e.g., 203, 1503, 3803)</td>
-          <td>0.370%</td>
-          <td>$55,500</td>
-          <td class="highlight">$428.63</td>
-          <td>$102,870</td>
-          <td class="highlight">$47,370</td>
-        </tr>
-        <tr>
-          <td><strong>04</strong></td>
-          <td>x04 (e.g., 204, 1504, 3804)</td>
-          <td>0.173%</td>
-          <td>$25,950</td>
-          <td class="highlight">$200.41</td>
-          <td>$48,099</td>
-          <td class="highlight">$22,149</td>
-        </tr>
-        <tr>
-          <td><strong>05</strong></td>
-          <td>x05 (e.g., 205, 1505, 3805)</td>
-          <td>0.164%</td>
-          <td>$24,600</td>
-          <td class="highlight">$189.99</td>
-          <td>$45,597</td>
-          <td class="highlight">$20,997</td>
-        </tr>
-        <tr>
-          <td><strong>06</strong></td>
-          <td>x06 (e.g., 206, 1506, 3806)</td>
-          <td>0.113%</td>
-          <td>$16,950</td>
-          <td class="highlight">$130.90</td>
-          <td>$31,417</td>
-          <td class="highlight">$14,467</td>
-        </tr>
-        <tr>
-          <td><strong>07</strong></td>
-          <td>x07 (e.g., 207, 1507, 3807)</td>
-          <td>0.169%</td>
-          <td>$25,350</td>
-          <td class="highlight">$195.78</td>
-          <td>$46,987</td>
-          <td class="highlight">$21,637</td>
-        </tr>
-        <tr>
-          <td><strong>08</strong></td>
-          <td>x08 (e.g., 208, 1508, 3808)</td>
-          <td>0.270%</td>
-          <td>$40,500</td>
-          <td class="highlight">$312.78</td>
-          <td>$75,068</td>
-          <td class="highlight">$34,568</td>
-        </tr>
-        <tr>
-          <td><strong>09</strong></td>
-          <td>x09 (e.g., 209, 1509, 3809)</td>
-          <td>0.148%</td>
-          <td>$22,200</td>
-          <td class="highlight">$171.45</td>
-          <td>$41,148</td>
-          <td class="highlight">$18,948</td>
-        </tr>
-        <tr>
-          <td><strong>10</strong></td>
-          <td>x10 (e.g., 210, 1510, 3810)</td>
-          <td>0.113%</td>
-          <td>$16,950</td>
-          <td class="highlight">$130.90</td>
-          <td>$31,417</td>
-          <td class="highlight">$14,467</td>
-        </tr>
-        <tr>
-          <td><strong>11</strong></td>
-          <td>x11 (e.g., 211, 1511, 3811)</td>
-          <td>0.155%</td>
-          <td>$23,250</td>
-          <td class="highlight">$179.56</td>
-          <td>$43,094</td>
-          <td class="highlight">$19,844</td>
-        </tr>
-        <tr>
-          <td><strong>12</strong></td>
-          <td>x12 (e.g., 212, 1512, 3812)</td>
-          <td>0.257%</td>
-          <td>$38,550</td>
-          <td class="highlight">$297.72</td>
-          <td>$71,453</td>
-          <td class="highlight">$32,903</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Combined Units (Two or More Tiers Merged)</h3>
-    <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px">Some units in the building have been combined, resulting in higher ownership percentages and correspondingly larger assessment shares.</p>
-
-    <table class="comparison-table appendix-table" style="font-size:12px">
-      <thead>
-        <tr>
-          <th>Tiers Combined</th>
-          <th>Example Units</th>
-          <th>Ownership %</th>
-          <th>Assessment</th>
-          <th>Monthly Payment</th>
-          <th>Total Paid (20 yr)</th>
-          <th>Total Interest</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>02 + 03</strong></td>
-          <td>302/03, 1802/03, 4202/03</td>
-          <td>0.638%</td>
-          <td>$95,700</td>
-          <td class="highlight">$739.09</td>
-          <td>$177,382</td>
-          <td class="highlight">$81,682</td>
-        </tr>
-        <tr>
-          <td><strong>02 + 03*</strong></td>
-          <td>3103 (incl. 3102)</td>
-          <td>0.639%</td>
-          <td>$95,850</td>
-          <td class="highlight">$740.25</td>
-          <td>$177,660</td>
-          <td class="highlight">$81,810</td>
-        </tr>
-        <tr>
-          <td><strong>03 + 04</strong></td>
-          <td>2203/04, 3203/04</td>
-          <td>0.543%</td>
-          <td>$81,450</td>
-          <td class="highlight">$629.04</td>
-          <td>$150,969</td>
-          <td class="highlight">$69,519</td>
-        </tr>
-        <tr>
-          <td><strong>06 + 07 + 08</strong></td>
-          <td>1406/07/08, 3506/07/08</td>
-          <td>0.552%</td>
-          <td>$82,800</td>
-          <td class="highlight">$639.46</td>
-          <td>$153,472</td>
-          <td class="highlight">$70,672</td>
-        </tr>
-        <tr>
-          <td><strong>06 + 08</strong></td>
-          <td>2606/08, 4106/08</td>
-          <td>0.383%</td>
-          <td>$57,450</td>
-          <td class="highlight">$443.69</td>
-          <td>$106,485</td>
-          <td class="highlight">$49,035</td>
-        </tr>
-        <tr>
-          <td><strong>07 + 08</strong></td>
-          <td>1907/08, 2507/08, 3007/08, 3107/08, 3207/08</td>
-          <td>0.439%</td>
-          <td>$65,850</td>
-          <td class="highlight">$508.56</td>
-          <td>$122,054</td>
-          <td class="highlight">$56,204</td>
-        </tr>
-        <tr>
-          <td><strong>10 + 12</strong></td>
-          <td>710/12, 2710/12, 4110/12</td>
-          <td>0.370%</td>
-          <td>$55,500</td>
-          <td class="highlight">$428.63</td>
-          <td>$102,870</td>
-          <td class="highlight">$47,370</td>
-        </tr>
-        <tr>
-          <td><strong>10 + 11 + 12</strong></td>
-          <td>3510/11/12</td>
-          <td>0.525%</td>
-          <td>$78,750</td>
-          <td class="highlight">$608.19</td>
-          <td>$145,965</td>
-          <td class="highlight">$67,215</td>
-        </tr>
-        <tr>
-          <td><strong>11 + 12</strong></td>
-          <td>511/12, 1811/12, 2611/12, 3311/12</td>
-          <td>0.412%</td>
-          <td>$61,800</td>
-          <td class="highlight">$477.28</td>
-          <td>$114,548</td>
-          <td class="highlight">$52,748</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="fact-box alert" style="margin-top:20px">
-      <div class="fact-box-label">Important Disclaimer</div>
-      <p style="margin:0">This appendix is a <strong>simplified illustrative example only</strong> using standard amortization at the 6.95% floor rate discussed in the March 2026 HOA meeting. Actual loan terms have not been finalized. The rate is a <em>floor</em> &mdash; it may go higher. Additional fees, closing costs, and any changes to the loan structure are not reflected. Owners who pay their assessment share in full upfront would avoid all interest charges. The ownership percentages shown are from the association's official records; combined units reflect recorded mergers. Consult the final loan documents and your financial advisor for exact payment obligations.</p>
-    </div>
-  </div>
-</div>
-
-<!-- SOURCES -->
-<div class="source-list" style="padding: 0 48px;">
-  <strong>Sources &amp; References</strong><br>
-  <em>Mikulecky v. Bart</em>, 355 Ill. App. 3d 1006 (1st Dist. 2004) &mdash; <a href="http://www.illinoiscourts.gov/Opinions/AppellateCourt/2004/1stDistrict/December/Html/1030378.htm">Full Opinion</a><br>
-  Illinois Condominium Property Act, 765 ILCS 605/22.1 &mdash; <a href="https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=076506050K22.1">Full Text</a><br>
-  BRK Chicago, "22.1 Disclosures: Avoid Liability by Including Anticipated Expenditures" &mdash; <a href="https://www.brkchicago.com/legal-tips-22-1-disclosures-avoid-liability-by-including-anticipated-expenditures/">Article</a><br>
-  KSN Law, "22.1 Disclosures in Illinois Community Associations" &mdash; <a href="https://www.ksnlaw.com/blog/221-disclosures-illinois-community-associations/">Article</a><br>
-  Fannie Mae Selling Guide B4-2.2-02, "Full Review Process" &mdash; <a href="https://selling-guide.fanniemae.com/sel/b4-2.2-02/full-review-process">Guide</a><br>
-  Fannie Mae Lender Letter LL-2021-14, "Temporary Requirements for Condominiums" &mdash; <a href="https://singlefamily.fanniemae.com/media/29411/display">PDF</a><br>
-  CAI-IL, "Association Disclosures Under Section 22.1" &mdash; <a href="https://www.cai-illinois.org/association-disclosures-section-22-1-illinois-condominium-property-act/">Article</a><br>
-  IL HOA Law Blog, "Prepare your Condo for New Fannie Mae Requirements" &mdash; <a href="https://ilhoalaw.com/2022/01/06/prepare-your-condo-for-the-new-fannie-mae-and-freddie-mac-lending-requirements/">Article</a><br>
-  Rudolph Kaplan, "Condo Deferred Maintenance After Surfside" &mdash; <a href="https://rudolphkaplan.com/blog/2021/12/29/condo-deferred-maintenance-after-surfside">Article</a><br>
-  KSN Law, "New Reserve Study Requirements for Illinois" &mdash; <a href="https://www.ksnlaw.com/blog/reserve-study-requirements-illinois-community-associations-2025/">Article</a><br>
-  Dickler Law, "Can Illinois Condo Boards Be Sued for Underfunded Reserves?" &mdash; <a href="https://www.dicklerlaw.com/blog/can-illinois-condo-boards-be-sued-for-underfunded-reserves">Article</a><br>
-  HOA Meeting Recording Transcript, March 9, 2026<br>
-  Building Management Notice to Residents re: Facade Project Commencement, March 12, 2026 (Sandy Fiore, Sudler Property Management)
-</div>
-
-<div class="footer">
-  <strong>2626 N Lakeview Ave, Chicago, IL</strong> &mdash; <strong>Disclaimer:</strong> This document is prepared by a unit owner of 2626 N Lakeview Ave for informational purposes only. It is not legal advice. The facts presented are drawn from the official HOA meeting recording of March 9, 2026, publicly available legal opinions, and published industry standards. Owners considering legal action should consult a licensed Illinois attorney experienced in condominium law. All Illinois statute citations and case law references are verifiable through the linked sources above.
-  <br><a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:11px;">Privacy Policy</a>
-</div>
-
-</body>
+  </body>
 </html>
